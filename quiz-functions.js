@@ -76,7 +76,7 @@ function endQuiz() {
     const isCompleted = true; // Quiz zawsze zostanie ukoñczony, gdy wywo³asz tê funkcjê
     const isPassed = (correctAnswers / numberOfQuestions) >= 0.65;
     updateStats(isCompleted, isPassed);
-    updateStatsDisplay();
+    //updateStatsDisplay();
     visualEndQuiz(isPassed);
 }
 
