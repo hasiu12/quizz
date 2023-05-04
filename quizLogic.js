@@ -120,7 +120,7 @@ function updateStats(isCompleted, isPassed) {
         const updatedFailedInARow = failedInARow + 1;
         localStorage.setItem('failedInARow', updatedFailedInARow);
 
-        if (updatedFailedInARow >= 3) {
+        if (updatedFailedInARow >= 10) {
             negativePoints += 1;
             localStorage.setItem('negativePoints', negativePoints);
             localStorage.setItem('failedInARow', '0');
