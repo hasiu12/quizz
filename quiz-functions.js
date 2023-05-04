@@ -114,28 +114,28 @@ function resetAnswer() {
     answerChecked = false; // Ustaw, ¿e odpowiedŸ nie zosta³a sprawdzona
 }
 
-//function handleNumericKeyPress(event, answersCopy) {
-   // const key = event.key;
-   // const numericKeys = ['1', '2', '3', '4', '5'];
-//
-  ///  if (numericKeys.includes(key)) {
-   //     let answerIndex = parseInt(key) - 1;
-  //      const answerInput = document.getElementById(`answer-${answersCopy[answerIndex].index}`);
-   //     if (answerInput) {
-  //          answerInput.checked = true;
-   //     }
-   // } else if (key === ' ') {
-  //      event.preventDefault(); // Zapobiegamy domyœlnemu dzia³aniu spacji (przewijanie strony)
-   //     if (currentQuestion === numberOfQuestions - 1) {
-  //          if (answerChecked === false) {
-   //             document.getElementById('endQuiz').click();
-   //         }
-    //    } else {
-  //          document.getElementById('submit').click();
-   //     }
-  //      updateButtonsVisibility();
-  //  }
-//}
+function handleNumericKeyPress(event, answersCopy) {
+    const key = event.key;
+    const numericKeys = ['1', '2', '3', '4', '5'];
+
+    if (numericKeys.includes(key)) {
+        let answerIndex = parseInt(key) - 1;
+        const answerInput = document.getElementById(`answer-${answersCopy[answerIndex].index}`);
+        if (answerInput) {
+            answerInput.checked = true;
+        }
+    } else if (key === ' ') {
+        event.preventDefault(); // Zapobiegamy domyœlnemu dzia³aniu spacji (przewijanie strony)
+        if (currentQuestion === numberOfQuestions - 1) {
+            if (answerChecked === false) {
+                document.getElementById('endQuiz').click();
+           }
+        } else {
+            document.getElementById('submit').click();
+        }
+        updateButtonsVisibility();
+    }
+}
 
 function checkIfNoneExists(answers) {
     for (const answer of answers) {
