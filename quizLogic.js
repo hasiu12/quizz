@@ -104,8 +104,6 @@ function updateStatsDisplay() {
     document.getElementById('attempts').textContent = localStorage.getItem('attempts') || '0';
     document.getElementById('completed').textContent = localStorage.getItem('completed') || '0';
     document.getElementById('passed').textContent = localStorage.getItem('passed') || '0';
-    document.getElementById('failedInARow').textContent = localStorage.getItem('failedInARow') || '0'; // Add this line
-    document.getElementById('negativePoints').textContent = localStorage.getItem('negativePoints') || '0'; // Add this line
 }
 
 function updateStats(isCompleted, isPassed) {
