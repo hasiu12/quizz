@@ -18,4 +18,4 @@ LICENCJA UŻYTKOWANIA DANYCH ZAWARTYCH W QUIZZIE
     Zmiany i Rozwiązanie Licencji
     Licencjodawca może zmieniać warunki Licencji i ma prawo ją rozwiązać, jeśli Użytkownik naruszy warunki Licencji.
 
-hasiu12.spółka z.o.o.
+hasiu12.spółka z o.o.
