@@ -139,7 +139,7 @@ function handleNumericKeyPress(event, answersCopy) {
 
 function checkIfNoneExists(answers) {
     for (const answer of answers) {
-        if (answer.toLowerCase() === '¿adne z powy¿szych') {
+        if (answer.toLowerCase() === 'żadne z powy¿szych') {
             return true;
         }
     }
@@ -148,7 +148,7 @@ function checkIfNoneExists(answers) {
 
 function checkIfAllExists(answers) {
     for (const answer of answers) {
-        if (answer.toLowerCase() === 'wszystkie powy¿sze') {
+        if (answer.toLowerCase() === 'wszystkie powyższe') {
             return true;
         }
     }
