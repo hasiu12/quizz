@@ -20,8 +20,7 @@ let isFirstQuiz = true;
 // Funkcja pobieraj¹ca dane z pliku JSON
 async function fetchData() {
     console.log('Fetching quiz data...');
-
-    if (!initialDataLoaded || variant === true) {
+    if (!initialDataLoaded||variant===true) {
         try {
             // Pobierz dane z JSONbin.io
             const response = await fetch('https://api.jsonbin.io/v3/b/6452eae69d312622a356f1fc', {
@@ -36,7 +35,7 @@ async function fetchData() {
 
             const jsonResponse = await response.json(); // Pobierz dane z odpowiedzi
             quizData = jsonResponse.record; // Przypisz dane do quizData
-            const allQuestions = quizData.slice(); // Stwórz kopię wszystkich pytań
+            const allQuestions = quizData.slice(); // Stwórz kopiê wszystkich pytañ
 
             initialDataLoaded = true;
             generateQuizzes(allQuestions);
@@ -44,12 +43,12 @@ async function fetchData() {
             console.error('Error while fetching JSON data:', error);
         }
     }
-
     if (variant === false) {
         shuffleArray(quizData);
     }
 
     displayQuestion();
+
 }
 
 document.getElementById('startQuiz').addEventListener('click', function () {
@@ -117,4 +116,3 @@ document.getElementById('newQuiz').addEventListener('click', function () {
     restartQuiz();
 
 });
-
