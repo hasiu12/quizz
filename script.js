@@ -21,7 +21,7 @@ let isFirstQuiz = true;
 async function fetchData() {
     console.log('Fetching quiz data...');
 
-    if (!initialDataLoaded || variant === false) {
+    if (!initialDataLoaded || variant === true) {
         try {
             // Pobierz dane z JSONbin.io
             const response = await fetch('https://api.jsonbin.io/v3/b/6452eae69d312622a356f1fc', {
