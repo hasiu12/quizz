@@ -72,9 +72,12 @@ function shuffleArray(array) {
     }
 }
 
-function shuffleArray1(arr, allOfTheAbove, noneOfTheAbove) {
+function shuffleArray1(arr) {
     let currentIndex = arr.length;
     let temporaryValue, randomIndex;
+
+    const allOfTheAbove = checkIfAllExists(arr);
+    const noneOfTheAbove = checkIfNoneExists(arr);
 
     if (allOfTheAbove && noneOfTheAbove) {
         // Przesuń odpowiedzi "wszystkie powyższe" i "żadne z powyższych" na końcu tablicy
@@ -105,6 +108,7 @@ function shuffleArray1(arr, allOfTheAbove, noneOfTheAbove) {
 
     return arr;
 }
+
 
 function updateStatsDisplay() {
     document.getElementById('attempts').textContent = localStorage.getItem('attempts') || '0';
