@@ -1,15 +1,15 @@
 // Zmienne globalne
 let currentQuestion = 0; // Indeks aktualnego pytania
-let userAnswer; // Wybrana przez u¿ytkownika odpowiedŸ
-let answerChecked = false; // Czy odpowiedŸ zosta³a sprawdzona
+let userAnswer; // Wybrana przez uÂ¿ytkownika odpowiedÅ¸
+let answerChecked = false; // Czy odpowiedÅ¸ zostaÂ³a sprawdzona
 let correctAnswers = 0; // Liczba poprawnych odpowiedzi
-let wrongAnswers = 0; // Liczba b³êdnych odpowiedzi
+let wrongAnswers = 0; // Liczba bÂ³Ãªdnych odpowiedzi
 let quizData; // Dane z pliku JSON
-let initialDataLoaded = false; // Czy dane zosta³y ju¿ wczytane
+let initialDataLoaded = false; // Czy dane zostaÂ³y juÂ¿ wczytane
 let isLastAnswerNone = false;
-const noneOfTheAboveOption = '¿adne z powy¿szych';
+const noneOfTheAboveOption = 'Â¿adne z powyÂ¿szych';
 const numberOfQuestions = 15;
-const allOfTheAboveOption = 'wszystkie powy¿sze';
+const allOfTheAboveOption = 'wszystkie powyÂ¿sze';
 let odpowiedzi = [];
 let userAnswers = new Array(numberOfQuestions).fill(null);
 let quizzes = [];
@@ -17,10 +17,11 @@ let variant = false;
 let negativ = false;
 let isFirstQuiz = true;
 
-// Funkcja pobieraj¹ca dane z pliku JSON
+// Funkcja pobierajÂ¹ca dane z pliku JSON
 async function fetchData() {
     console.log('Fetching quiz data...');
-    if (!initialDataLoaded) {
+
+    if (!initialDataLoaded || variant === false) {
         try {
             // Pobierz dane z JSONbin.io
             const response = await fetch('https://api.jsonbin.io/v3/b/6452eae69d312622a356f1fc', {
@@ -35,7 +36,7 @@ async function fetchData() {
 
             const jsonResponse = await response.json(); // Pobierz dane z odpowiedzi
             quizData = jsonResponse.record; // Przypisz dane do quizData
-            const allQuestions = quizData.slice(); // Stwórz kopiê wszystkich pytañ
+            const allQuestions = quizData.slice(); // StwÃ³rz kopiÄ™ wszystkich pytaÅ„
 
             initialDataLoaded = true;
             generateQuizzes(allQuestions);
@@ -43,12 +44,12 @@ async function fetchData() {
             console.error('Error while fetching JSON data:', error);
         }
     }
+
     if (variant === false) {
         shuffleArray(quizData);
     }
 
     displayQuestion();
-
 }
 
 document.getElementById('startQuiz').addEventListener('click', function () {
@@ -65,20 +66,20 @@ document.getElementById('startQuiz').addEventListener('click', function () {
 
 document.getElementById('submit').addEventListener('click', function () {
     if (!answerChecked) {
-        // Pobierz zaznaczon¹ odpowiedŸ
+        // Pobierz zaznaczonÂ¹ odpowiedÅ¸
         const checkedAnswer = document.querySelector('input[name="answer"]:checked');
 
         if (checkedAnswer) {
-            userAnswer = parseInt(checkedAnswer.value); // Przekszta³æ wartoœæ zaznaczonej odpowiedzi na liczbê
-            checkAnswer(); // SprawdŸ odpowiedŸ
+            userAnswer = parseInt(checkedAnswer.value); // PrzeksztaÂ³Ã¦ wartoÅ“Ã¦ zaznaczonej odpowiedzi na liczbÃª
+            checkAnswer(); // SprawdÅ¸ odpowiedÅ¸
             answerChecked = true;
         } else {
-            // Usuñ event listener na zdarzenie 'keydown' przed wyœwietleniem alertu
+            // UsuÃ± event listener na zdarzenie 'keydown' przed wyÅ“wietleniem alertu
             document.removeEventListener('keydown', handleNumericKeyPress);
 
-           // alert('Wybierz odpowiedŸ przed sprawdzeniem!'); // Wyœwietl ostrze¿enie, jeœli nie zaznaczono ¿adnej odpowiedzi
+           // alert('Wybierz odpowiedÅ¸ przed sprawdzeniem!'); // WyÅ“wietl ostrzeÂ¿enie, jeÅ“li nie zaznaczono Â¿adnej odpowiedzi
 
-            // Dodaj ponownie event listener na zdarzenie 'keydown' po zamkniêciu alertu
+            // Dodaj ponownie event listener na zdarzenie 'keydown' po zamkniÃªciu alertu
             document.addEventListener('keydown', (event) => handleNumericKeyPress(event, answersCopy));
         }
     }
@@ -95,8 +96,8 @@ document.getElementById('showResults').addEventListener('click', function () {
 
 document.getElementById('menu').addEventListener('click', function () {
     currentQuestion = 0; // Zresetuj indeks pytania
-    correctAnswers = 0; // Zresetuj liczbê poprawnych odpowiedzi
-    wrongAnswers = 0; // Zresetuj liczbê b³êdnych odpowiedzi
+    correctAnswers = 0; // Zresetuj liczbÃª poprawnych odpowiedzi
+    wrongAnswers = 0; // Zresetuj liczbÃª bÂ³Ãªdnych odpowiedzi
     variant = false;
     visualMenu();
 
