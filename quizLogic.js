@@ -72,32 +72,38 @@ function shuffleArray(array) {
     }
 }
 
-function shuffleArray1(array) {
-    const noneExists = checkIfNoneExists(quizData[currentQuestion].answers);
-    const allExists = checkIfAllExists(quizData[currentQuestion].answers);
+function shuffleArray1(arr, allOfTheAbove, noneOfTheAbove) {
+    let currentIndex = arr.length;
+    let temporaryValue, randomIndex;
 
-    if (!noneExists && !allExists) {
-        for (let i = array.length - 2; i > 0; i--) {
-            const j = Math.floor(Math.random() * i);
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    } else {
-        const endIndex = array.length - (allExists && noneExists ? 3 : 2);
-        for (let i = endIndex; i > 0; i--) {
-            const j = Math.floor(Math.random() * i);
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+    if (allOfTheAbove && noneOfTheAbove) {
+        // Przesuń odpowiedzi "wszystkie powyższe" i "żadne z powyższych" na końcu tablicy
+        const allOfTheAboveIndex = arr.indexOf(allOfTheAboveOption);
+        const noneOfTheAboveIndex = arr.indexOf(noneOfTheAboveOption);
+        [arr[allOfTheAboveIndex], arr[currentIndex - 2]] = [arr[currentIndex - 2], arr[allOfTheAboveIndex]];
+        [arr[noneOfTheAboveIndex], arr[currentIndex - 1]] = [arr[currentIndex - 1], arr[noneOfTheAboveIndex]];
 
-        if (allExists) {
-            const allIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'wszystkie powyższe');
-            [array[noneExists ? 3 : 4], array[allIndex]] = [array[allIndex], array[noneExists ? 3 : 4]];
-        }
-        if (noneExists) {
-            const noneIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'żadne z powyższych');
-            [array[array.length - 1], array[noneIndex]] = [array[noneIndex], array[array.length - 1]];
-        }
+        // Pomijamy dwa ostatnie indeksy, gdyż chcemy utrzymać odpowiedzi na miejscach 4 i 5
+        currentIndex -= 2;
+    } else if (allOfTheAbove || noneOfTheAbove) {
+        const optionIndex = allOfTheAbove ? arr.indexOf(allOfTheAboveOption) : arr.indexOf(noneOfTheAboveOption);
+        [arr[optionIndex], arr[currentIndex - 1]] = [arr[currentIndex - 1], arr[optionIndex]];
+
+        // Pomijamy ostatni indeks, gdyż chcemy utrzymać odpowiedź na miejscu 5
+        currentIndex -= 1;
     }
-    return array;
+
+    // Przetasuj tablicę z wyjątkiem ostatnich elementów (1 lub 2 w zależności od przypadku)
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = arr[currentIndex];
+        arr[currentIndex] = arr[randomIndex];
+        arr[randomIndex] = temporaryValue;
+    }
+
+    return arr;
 }
 
 function updateStatsDisplay() {
