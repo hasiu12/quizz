@@ -1,4 +1,4 @@
-// Funkcja sprawdzająca odpowiedź i zliczająca wyniki
+﻿// Funkcja sprawdzająca odpowiedź i zliczająca wyniki
 function checkAnswer() {
     const correctAnswer = quizData[currentQuestion].correctAnswer;
 
