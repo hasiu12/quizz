@@ -1,15 +1,19 @@
 function visualNewQuizz() {
     document.getElementById('startQuiz').style.display = 'none'; // Ukryj przycisk "Rozpocznij quiz"
-    document.getElementById('quizContent').style.display = 'block'; // Wyœwietl zawartoœæ quizu
+    document.getElementById('quizContent').style.display = 'block'; // WyÅ›wietl zawartoÅ›Ä‡ quizu
     document.getElementById('instructions1').style.display = 'none';
     document.getElementById('instructions2').style.display = 'none';
     document.getElementById('instructions3').style.display = 'none';
     document.getElementById('quizSelection').style.display = 'none';
+    let poprawaElements = document.querySelectorAll('.poprawa'); // ZnajdÅº wszystkie elementy o klasie "poprawa"
+    poprawaElements.forEach((element) => { // Dla kaÅ¼dego takiego elementu
+        element.style.display = 'none'; // Ukryj element
+    });
 }
 
 function visualMenu() {
     document.getElementById('startQuiz').style.display = 'block'; // Ukryj przycisk "Rozpocznij quiz"
-    document.getElementById('quizContent').style.display = 'none'; // Wyœwietl zawartoœæ quizu
+    document.getElementById('quizContent').style.display = 'none'; // WyÅ›wietl zawartoÅ›Ä‡ quizu
     document.getElementById('instructions1').style.display = 'block';
     document.getElementById('instructions2').style.display = 'block';
     document.getElementById('instructions3').style.display = 'block';
@@ -19,6 +23,10 @@ function visualMenu() {
     document.getElementById('newQuiz').style.display = 'none';
     document.getElementById('allAnswers').style.display = 'none'; // Ukryj wszystkie odpowiedzi
     kblisko();
+    let poprawaElements = document.querySelectorAll('.poprawa'); // ZnajdÅº wszystkie elementy o klasie "poprawa"
+    poprawaElements.forEach((element) => { // Dla kaÅ¼dego takiego elementu
+        element.style.display = 'block'; // Ukryj element
+    });
 }
 
 function kblisko() {
@@ -33,7 +41,7 @@ function kblisko() {
 
 function visualResetQuizz() {
     document.getElementById('results').style.display = 'none'; // Ukryj wyniki
-    document.getElementById('quizContent').style.display = 'block'; // Wyœwietl zawartoœæ quizu
+    document.getElementById('quizContent').style.display = 'block'; // WyÅ›wietl zawartoÅ›Ä‡ quizu
     document.getElementById('newQuiz').style.display = 'none';
     document.getElementById('allAnswers').style.display = 'none'; // Ukryj wszystkie odpowiedzi
     document.getElementById('menu').style.display = 'none';
@@ -47,39 +55,57 @@ function visualEndQuiz(isPassed) {
     const kox = document.getElementById('kox');
     const bilskopajak = document.getElementById('bilskopajak');
 
-        if (isPassed === true) {
+    bilsko.style.display = 'none';
+    poteznybilsko.style.display = 'none';
+    kox.style.display = 'none';
+    bilskopajak.style.display = 'none';
+
+    let displayCase;
+
+    if (isPassed) {
+        displayCase = 'kox';
+    } else if (correctAnswers < 3 && !negativ) {
+        displayCase = 'poteznybilsko';
+    } else if (negativ) {
+        displayCase = 'bilskopajak';
+    } else {
+        displayCase = 'bilsko';
+    }
+
+    switch (displayCase) {
+        case 'kox':
             kox.style.display = 'block';
             kox.style.margin = 'auto';
-              }
-        else if (correctAnswers < 3 && negativ === false) {
+            break;
+        case 'poteznybilsko':
             poteznybilsko.style.display = 'block';
             poteznybilsko.style.margin = 'auto';
-            bilskopajak.style.display = 'none';
-        }
-        else if (negativ === true) {
+            break;
+        case 'bilskopajak':
             bilskopajak.style.display = 'block';
             bilskopajak.style.margin = 'auto';
-            poteznybilsko.style.display = 'none';
-        }
-        else {
+            break;
+        case 'bilsko':
+        default:
             bilsko.style.display = 'block';
             bilsko.style.margin = 'auto';
-        }
-
+            break;
+    }
 
     quizStats.style.display = 'block';
 
-    document.getElementById('quizContent').style.display = 'none'; // Ukryj zawartoœæ quizu
-    document.getElementById('results').style.display = 'block'; // Wyœwietl wyniki
+    document.getElementById('quizContent').style.display = 'none'; // Ukryj zawartoÅ›Ä‡ quizu
+    document.getElementById('results').style.display = 'block'; // WyÅ›wietl wyniki
     document.getElementById('results').classList.add('styled-text');
     const scoreElement = document.getElementById('score');
     scoreElement.classList.add('score-text');
     scoreElement.innerHTML = `Poprawne odpowiedzi: ${correctAnswers}<br><br> B\u0142\u0119dne odpowiedzi: ${wrongAnswers}<br><br>`;
-    scoreElement.style.textAlign = 'center'; // Wyœwietl liczbê poprawnych i b³êdnych odpowiedzi
-    document.getElementById('menu').style.display = 'block'; // Wyœwietl wyniki
+    scoreElement.style.textAlign = 'center'; // WyÅ›wietl liczbÄ™ poprawnych i bÅ‚Ä™dnych odpowiedzi
+    document.getElementById('menu').style.display = 'block'; // WyÅ›wietl wyniki
 
     document.getElementById('showResults').style.display = 'block';
-    document.getElementById('newQuiz').style.display = 'block'; // Wyœwietl przycisk "Nowy quiz"
+
+    document.getElementById('newQuiz').style.display = 'block'; // WyÅ›wietl przycisk "Nowy quiz"
 }
 
 function updateButtonsVisibility() {
