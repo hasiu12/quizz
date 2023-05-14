@@ -1,15 +1,15 @@
 // Zmienne globalne
 let currentQuestion = 0; // Indeks aktualnego pytania
-let userAnswer; // Wybrana przez uøytkownika odpowiedü
-let answerChecked = false; // Czy odpowiedü zosta≥a sprawdzona
+let userAnswer; // Wybrana przez u¬øytkownika odpowied≈∏
+let answerChecked = false; // Czy odpowied≈∏ zosta¬≥a sprawdzona
 let correctAnswers = 0; // Liczba poprawnych odpowiedzi
-let wrongAnswers = 0; // Liczba b≥Ídnych odpowiedzi
+let wrongAnswers = 0; // Liczba b¬≥√™dnych odpowiedzi
 let quizData; // Dane z pliku JSON
-let initialDataLoaded = false; // Czy dane zosta≥y juø wczytane
+let initialDataLoaded = false; // Czy dane zosta¬≥y ju¬ø wczytane
 let isLastAnswerNone = false;
-const noneOfTheAboveOption = 'øadne z powyøszych';
+const noneOfTheAboveOption = '¬øadne z powy¬øszych';
 const numberOfQuestions = 15;
-const allOfTheAboveOption = 'wszystkie powyøsze';
+const allOfTheAboveOption = 'wszystkie powy¬øsze';
 let odpowiedzi = [];
 let userAnswers = new Array(numberOfQuestions).fill(null);
 let quizzes = [];
@@ -17,7 +17,7 @@ let variant = false;
 let negativ = false;
 let isFirstQuiz = true;
 
-// Funkcja pobierajπca dane z pliku JSON
+// Funkcja pobieraj¬πca dane z pliku JSON
 async function fetchData() {
     console.log('Fetching quiz data...');
     if (!initialDataLoaded) {
@@ -35,7 +35,7 @@ async function fetchData() {
 
             const jsonResponse = await response.json(); // Pobierz dane z odpowiedzi
             quizData = jsonResponse.record; // Przypisz dane do quizData
-            const allQuestions = quizData.slice(); // StwÛrz kopiÍ wszystkich pytaÒ
+            const allQuestions = quizData.slice(); // Stw√≥rz kopi√™ wszystkich pyta√±
 
             initialDataLoaded = true;
             generateQuizzes(allQuestions);
@@ -65,20 +65,20 @@ document.getElementById('startQuiz').addEventListener('click', function () {
 
 document.getElementById('submit').addEventListener('click', function () {
     if (!answerChecked) {
-        // Pobierz zaznaczonπ odpowiedü
+        // Pobierz zaznaczon¬π odpowied≈∏
         const checkedAnswer = document.querySelector('input[name="answer"]:checked');
 
         if (checkedAnswer) {
-            userAnswer = parseInt(checkedAnswer.value); // Przekszta≥Ê wartoúÊ zaznaczonej odpowiedzi na liczbÍ
-            checkAnswer(); // Sprawdü odpowiedü
+            userAnswer = parseInt(checkedAnswer.value); // Przekszta¬≥√¶ warto≈ì√¶ zaznaczonej odpowiedzi na liczb√™
+            checkAnswer(); // Sprawd≈∏ odpowied≈∏
             answerChecked = true;
         } else {
-            // UsuÒ event listener na zdarzenie 'keydown' przed wyúwietleniem alertu
+            // Usu√± event listener na zdarzenie 'keydown' przed wy≈ìwietleniem alertu
             document.removeEventListener('keydown', handleNumericKeyPress);
 
-           // alert('Wybierz odpowiedü przed sprawdzeniem!'); // Wyúwietl ostrzeøenie, jeúli nie zaznaczono øadnej odpowiedzi
+           // alert('Wybierz odpowied≈∏ przed sprawdzeniem!'); // Wy≈ìwietl ostrze¬øenie, je≈ìli nie zaznaczono ¬øadnej odpowiedzi
 
-            // Dodaj ponownie event listener na zdarzenie 'keydown' po zamkniÍciu alertu
+            // Dodaj ponownie event listener na zdarzenie 'keydown' po zamkni√™ciu alertu
             document.addEventListener('keydown', (event) => handleNumericKeyPress(event, answersCopy));
         }
     }
@@ -95,8 +95,8 @@ document.getElementById('showResults').addEventListener('click', function () {
 
 document.getElementById('menu').addEventListener('click', function () {
     currentQuestion = 0; // Zresetuj indeks pytania
-    correctAnswers = 0; // Zresetuj liczbÍ poprawnych odpowiedzi
-    wrongAnswers = 0; // Zresetuj liczbÍ b≥Ídnych odpowiedzi
+    correctAnswers = 0; // Zresetuj liczb√™ poprawnych odpowiedzi
+    wrongAnswers = 0; // Zresetuj liczb√™ b¬≥√™dnych odpowiedzi
     variant = false;
     visualMenu();
 
@@ -116,4 +116,26 @@ document.getElementById('newQuiz').addEventListener('click', function () {
     restartQuiz();
 
 });
+async function createCustomQuiz(questionIds) {
+    await fetchData();  // Pobierz wszystkie dane quizu
 
+    // Stw√≥rz nowy zestaw danych quizu zawierajƒÖcy tylko pytania o okre≈õlonych ID
+    let customQuizData = quizData.filter((question) => questionIds.includes(question.id));
+
+
+    // ZastƒÖp quizData naszym nowym zestawem danych quizu
+    quizData = customQuizData;
+
+    currentQuestion = 0;  // Zacznij od pierwszego pytania
+    displayQuestion();  // Wy≈õwietl pytanie
+}
+
+// Mo≈ºemy teraz dodaƒá przycisk, kt√≥ry po klikniƒôciu wywo≈Ça `displayQuestionById`
+// Przyk≈Çadowo, je≈ºeli chcemy wy≈õwietliƒá pytanie o ID 135:
+
+document.getElementById('poprawa2').addEventListener('click', function () {
+    visualNewQuizz();
+    variant = true;
+    createCustomQuiz([136,72, 134,137, 138,139,77,126,140, 79,80,115,97,119,13,69]);//1,4,5,6,8
+
+});
