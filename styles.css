@@ -55,7 +55,7 @@ button:hover {
     font-size: 24px;
 }
 
-.answer-container {
+.answer-container, .custom-answer-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,8 +63,12 @@ button:hover {
     border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 10px;
-    width: 100%;
     cursor: pointer;
+    text-align: center; /* Wyśrodkowanie tekstu */
+    white-space: nowrap; /* Zapobieganie zawijaniu tekstu */
+    overflow: hidden; /* Ukrycie nadmiarowej zawartości */
+    min-width: max-content; /* Minimalna szerokość */
+    transition: width 0.3s ease; /* Płynne przejście */
 }
 
 .custom-answer-container {
@@ -169,17 +173,23 @@ h3 {
 }
 
 .question-container {
-    font-size: 28px; /* Powiększ czcionkę */
-    padding: 8px; /* Dodaj wewnętrzne marginesy dla tekstu */
-    display: flex;
+    font-size: 28px;
+    /* Powiększ czcionkę */
+    padding: 8px;
+    /* Dodaj wewnętrzne marginesy dla tekstu */
+    display: inline-block;
+    /* Dodaj display: inline-block */
     align-items: center;
     justify-content: center;
-    border: 2px solid transparent; /* Zmień kolor ramki na przezroczysty */
+    border: 2px solid transparent;
+    /* Zmień kolor ramki na przezroczysty */
     border-radius: 5px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    text-align: center; /* Wyśrodkuj tekst */
-    white-space: pre-wrap; /* Pozwól na zawijanie tekstu */
+    text-align: center;
+    /* Wyśrodkuj tekst */
+    white-space: pre-wrap;
+    /* Pozwól na zawijanie tekstu */
 }
 
 #newQuiz, #showResults {
@@ -211,4 +221,21 @@ h3 {
 
 body {
     animation: animatedBackground 40s linear infinite;
+}
+
+ 
+.quiz-link {
+    color: #007bff; /* Kolor tekstu */
+    text-decoration: none; /* Brak podkreślenia */
+    font-weight: bold; /* Pogrubienie tekstu */
+}
+
+/* Efekt po najechaniu na link */
+.quiz-link:hover {
+    color: #0056b3; /* Kolor tekstu po najechaniu */
+    text-decoration: underline; /* Podkreślenie po najechaniu */
+}
+img {
+    max-width: 100%;
+    height: auto;
 }

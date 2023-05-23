@@ -1,0 +1,607 @@
+﻿[
+  {
+    "id": 1,
+    "question": "W pętli\n for(<strong>char</strong> i=0;i&lt;256.i++)\n cout&lt;&lt;i&lt;&lt;endl;\n instukcja cout wykona sie",
+    "answers": [
+      "256 razy",
+      "257 razy",
+      "więcej niż 257 razy",
+      "255 razy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 2,
+    "question": "Funkcja<strong> rozszerzająca</strong>, jest to funkcja ",
+    "answers": [
+      "pozwalająca rozszerzyć możliwości już istniejącej metody",
+      "funkcja rozszerzająca kolekcję o nowe elementy",
+      "funkcja pozwalająca na dostęp do zmiennych prywatnych klasy",
+      "statyczna"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 3,
+    "question": "Wartości grupowane są w<strong>  n-tki</strong>  w: ",
+    "answers": [
+      "produktach kartezjańskich ",
+      "uniach",
+      "typach rekurencyjnych",
+      "mapowaniach"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 4,
+    "question": "Które z poniższych wyrażeń poprawnie definiuje w <strong>języku C#</strong> wyrażenie lambda,<strong> x.λ.y.(x y)</strong> ",
+    "answers": [
+      "(x,y) => y(x) ",
+      "(x,y) => (x y)",
+      "(x,y) => (y x)",
+      "(x,y) => x(y)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "question": "<strong>Blok programu</strong> jest to konstrukcja  ",
+    "answers": [
+      "Która może się łączyć tylko z instrukcją warunkową ",
+      "Która nie istnieje w nowoczesnych językach programowania ",
+      "Ograniczająca zakres widoczności deklaracji wewnątrz niego ",
+      "Równoważna definicji klasy "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "question": "Która, z poniższych instrukcji deklaruje <strong>zmienne sekwencyjnie</strong>  ",
+    "answers": [
+      "(let* ((x 2) (a 3)) (+x a))",
+      "(letrec ((x 2) (a 3)) (+ x a)) (letrec → rekurencyjny)",
+      "(let ((x 2) (a x)) (+ x a))",
+      "(let ((x 2) (a 3)) (+ x a))"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 7,
+    "question": "W językach <strong>o dynamicznym zakresie widoczności nazw</strong> ",
+    "answers": [
+      "Funkcja jest wywoływana w kontekście środowiska w którym została zdefiniowana",
+      "Funkcja jest wywoływana w kontekście środowiska w którym została wywołana",
+      "Funkcji nie ma",
+      "Funkcja jest wykonywana w dowolnym środowisku"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "<strong>Deklaracje </strong> są to instrukcje, które ",
+    "answers": [
+      "tworzą nowe funkcje",
+      "tworzą nowe zmienne",
+      "tworzą nowe stałe ",
+      "tworzą nowe wiązania"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 9,
+    "question": "Instrukcja <strong>typedef języka C++ </strong> powoduje ",
+    "answers": [
+      "przypisanie nowej nazwy do istniejącego typu",
+      "stworzenie nowej tablicy",
+      "przypisanie nowej nazwy do istniejącej zmiennej",
+      "stworzenie nowego typu dany"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 10,
+    "question": "Wyrażenie języka <strong> Scheme: '((+ 1 2) (- 2 3) (-3 4)) </strong> ",
+    "answers": [
+      "Listę wartości: 3, -1, -1, ()",
+      "Listę funkcji ",
+      "Nie wykona się z powodu błędu składniowego",
+      "Listę list symboli +, 1, 2, (); -, 2, 3, (); -, 3, 4, ()"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 11,
+    "question": "C++ jest językiem programowania, w którym <strong>system typów:</strong> ",
+    "answers": [
+      "jest statyczny",
+      "jest dynamiczny",
+      "zawiera tylko typy złożone",
+      "nie ma go"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 12,
+    "question": "Które wyrażenie rachunku lambda (wzbogaconego instrukcję iloczynu) będze miało to samo znaczenie, co instrukcja języka \n <strong>Scheme: (let ((x 2) (y 3)) (* x y))</strong> ",
+    "answers": [
+      "λx.λy.(* x y) 3 2",
+      "λx.[λy.(* x y)] 3 2",
+      "λx.[λ y.(* x y)] 2 3 jesli (let* ((x 2) (y 3)) (* x y))",
+      "λx.λy.(* x y) 2 3"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 13,
+    "question": "Wyrażenie <strong>((lambda (z) (lambda (x y) (+ x y z))) 1)</strong> zwraca:",
+    "answers": [
+      "Funkcję (procedura w Scheme)",
+      "Domknięcie",
+      "Nie wykona się z powodu błędu ",
+      "Wartość liczbową"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 14,
+    "question": "Zakresem widoczności zmiennych w wyrażeniu <strong>(let ((x 2) (y 3)) (+ x y))  </strong> jest:",
+    "answers": [
+      "lista ((x 2) (y 3))",
+      "całe wyrażenie (let ((x 2) (y 3)) (+ x y))",
+      "wyrażenie (y 3) i (+ x y)",
+      "wyrażenie (+ x y)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 15,
+    "question": "<strong>Smalltalk  </strong> jest językiem <strong>należącym do paradygmatu: </strong>",
+    "answers": [
+      "logicznego ",
+      "obiektowego ",
+      "imperatywnego ",
+      "funkcyjnego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 16,
+    "question": "Wyrażenie języka <strong>C#: x=>x+1 </strong>tworzy: ",
+    "answers": [
+      "wartość logiczną ",
+      "wartość całkowitą  ",
+      "nie ma takiego wyrażenie w języku C#  ",
+      "Funkcję anonimową (lambda)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 17,
+    "question": "Językiem <strong>o dynamicznym systemie typów </strong>nie jest: ",
+    "answers": [
+      "Scheme ",
+      "C",
+      "JavaScript ",
+      "PHP "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 18,
+    "question": "Do <strong>zwrócenie pierwszego elementu pary w języku Scheme </strong>służy funkcja: ",
+    "answers": [
+      "cdr  ",
+      "begin ",
+      "end  ",
+      "car  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 19,
+    "question": "Który program języka <strong>PROLOG </strong>pozwoli poprawnie <strong>obliczyć wartość silni:</strong> \n (,  ←  koniunkcja (AND)    :- ← implikacja \n; ← alternatywa (OR)",
+    "answers": [
+      "silnia(N,W) :- X is N-1, silnia(X, W_N_1), W is N*W_N_1.  silnia(0,W) :- W is 1  ",
+      "silnia(0,W) :- W = 1.silnia(N,W) :- X = N-1, silnia(X, W_N_1), W =  N*W_N_1 ",
+      "silnia(N,W) :- X = N-1, silnia(X, W_N_1), W = N*W_N_1. silnia(0,W) :-  W = 1  ",
+      "silnia(N,W) :- X is N-1, silnia(X, W_N_1), W is N*W_N_1. silnia(0,W) :- W is 1."
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 20,
+    "question": "Komenda <strong>mezczyzna(jan)? języka PROLOG </strong>definiuje \n (Zapytanie w Prologu: ?- mezczyzna(jan).   ← „Czy Jan jest mężczyzną?” )",
+    "answers": [
+      "nowe zapytanie ",
+      "nowy fakt ",
+      "ma błąd składniowy",
+      "nową relację"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 21,
+    "question": "Wyrażenie <strong>let* języka Scheme </strong>definiuje zmienne",
+    "answers": [
+      "równolegle ",
+      "rekurencyjnie ",
+      "których wartość można modyfikować",
+      "sekwencyjnie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 22,
+    "question": "Wyrażenie <strong>warunkowe w rachunku lambda </strong>zapisuje się jako:",
+    "answers": [
+      "λstx.tx  ",
+      "λstx.stx ",
+      "λstx.sxt",
+      "λstx.sx"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 23,
+    "question": "Wyrażenie <strong>let języka Scheme </strong>definiuje zmienne ",
+    "answers": [
+      "równolegle   ",
+      "rekurencyjnie  ",
+      "których wartość można modyfikować",
+      "sekwencyjnie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 24,
+    "question": "Przyjmując, że typ int zajmuje w pamięci 4 bajty, a typ char 1 bajt to zmienna typu  union Przyklad { int x; char y; }; będzie zajmować: ",
+    "answers": [
+      "4 bajty",
+      "8 bajtów (struktura int i char)  ",
+      "6 bajtów",
+      "5 bajtów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 25,
+    "question": "Wyrażenie języka <strong>C#: x=>x+2</strong> nazywane jest: ",
+    "answers": [
+      "funkcją rozszerzającą",
+      "funkcją statyczną",
+      "nie ma takiego wyrażenia w języku C# ",
+      "wyrażeniem lambda"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 26,
+    "question": "<strong> Fakty w PROLOGU:</strong>",
+    "answers": [
+      "są zawsze fałszywe",
+      "są albo prawdziwe albo fałszywe ",
+      "nie mają określonej wartości prawdy",
+      "są zawsze prawdziwe "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 27,
+    "question": "Słówko kluczowe<strong> var w C#</strong>  pozwala na ",
+    "answers": [
+      "zdefiniowanie dowolnej zmiennej",
+      "zdefiniowanie zmiennej dowolnego typu, który nie może być później zmieniany ",
+      "zdefiniowanie zmiennej typu podstawowego Object",
+      "zdefiniowanie zmiennej dowolnego typu, który może być później dowolnie zmieniany"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 28,
+    "question": "Zakresem widoczności zmiennych w wyrażeniu <strong>(let* ((x 2) (y 3)) (+ x y))</strong> jest ",
+    "answers": [
+      "lista ((x 2) (y 3))",
+      "całe wyrażenie (let ((x 2) (y 3)) (+ x y))",
+      "wyrażenie (y 3) i (+ x y)",
+      "wyrażenie (+ x y)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 29,
+    "question": "Który z poniższych języków programowania jest językiem programowania obiektowego:",
+    "answers": [
+      "Haskell ",
+      "C#",
+      "Prolog ",
+      "ML"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 30,
+    "question": "<strong>Postać normalna </strong>jest to ",
+    "answers": [
+      "Wyrażenie, którego nie można dalej redukować  ",
+      "Wyrażenie, które nie zawiera żadnej lambda abstrakcji",
+      "Wyrażenie, które nie zawiera zmiennych związanych ",
+      "Wyrażenie, które nie zawiera zmiennych wolnych "
+    ],
+    "explanation": "todo",
+    "correctAnswer":0
+  },
+  {
+    "id": 31,
+    "question": "<strong>Alfa konwersja </strong>polega na zmianie ",
+    "answers": [
+      "nazw zmiennych związanych ",
+      "lambda abstrakcji na aplikację ",
+      "aplikacji na lambda abstrakcję ",
+      "nazw zmiennych wolnych "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 32,
+    "question": "<strong>Operator koniunkcji jest w języku PROLOG </strong>oznaczany symbolem:",
+    "answers": [
+      ",",
+      "; ",
+      "?",
+      "."
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 33,
+    "question": "Jaka funkcja zostanie automatycznie stworzona w chwili deklaracji struktury (define-strukt punkt (x y)): ",
+    "answers": [
+      "make-punkt (konstruktor)",
+      "get-punkt (pobiera wartość ",
+      "put-punkt",
+      "set-punkt (ustawia wartość)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 34,
+    "question": "Która z poniższych instrukcji poprawnie deklaruje funkcję rozszerzającą:\n(Funkcja rozszerzająca ma this w argumencie – to co rozszerza!)",
+    "answers": [
+      "public static string Funkcja(string str) {…}",
+      "public string Funkcja(this string str) {…}",
+      "static string Funkcja(this string str) {…}",
+      "public static string Funkcja(this string str) {…} "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 35,
+    "question": "Która z poniższych instrukcji jest <strong>zawsze poprawna:</strong>",
+    "answers": [
+      "(let* ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5))",
+      "(letrec ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5))",
+      "(let~ ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5))",
+      "(let ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5)) "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 36,
+    "question": "Wynikiem operacji <strong>(nfx.f(n f x) st.ssst)</strong> będzie ",
+    "answers": [
+      "λst.ssst ",
+      "λst.ss",
+      "λfx.ffffx",
+      "λfx.fffx"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 37,
+    "question": "W<strong> rekordzie aktywacji funkcji przechowywane są:</strong>",
+    "answers": [
+      "zmienne lokalne  ",
+      "stałe ",
+      "żadne z powyższych",
+      "zmienne globalne "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 38,
+    "question": "Do zwrócenia<strong> drugiego elementu pary w języku Scheme</strong> służy funkcja",
+    "answers": [
+      "cdr",
+      "begin ",
+      "end ",
+      "car "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 39,
+    "question": "Przy przekazywaniu przez wartość argumentów 'z' funkcji parametrem aktualnym może być",
+    "answers": [
+      "stała",
+      "zmienna  (przez &) ",
+      "dowolnie ",
+      "wyrażenie  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 40,
+    "question": "Zakresem widoczności zmiennych w wyrażeniu <strong>(letrec ((x 2) (y 3)) (+ x y))</strong> jest",
+    "answers": [
+      "lista ((x 2) (y 3))",
+      "całe wyrażenie (let ((x 2) (y 3)) (+ x y))",
+      "wyrażenie (y 3) i (+ x y) ",
+      "wyrażenie (+ x y)  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 41,
+    "question": "Dowolna <strong>zmienna przechowywana na stercie</strong> jest (na stercie są wskaźniki!)",
+    "answers": [
+      "zawsze typu złożonego ",
+      "zawsze anonimowa ",
+      "tworzona zawsze na początku programu",
+      "zawsze typu prostego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 42,
+    "question": "Wrażenie <strong>letrec języka Scheme</strong> definiuje zmienne ",
+    "answers": [
+      "równolegle ",
+      "rekurencyjnie",
+      "których wartość można modyfikować",
+      "sekwencyjnie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 43,
+    "question": "<strong>Zmienna związana</strong> jest to",
+    "answers": [
+      "zmienna do której jest przypisana wartość  ",
+      "zmienna, która występuje w ciele funkcji w której jest zdefiniowana ",
+      "która nie istnieje, gdyż istnieją tylko zmienne wolne",
+      "zmienna do której przypisana jest inna zmienna "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 44,
+    "question": "Program \n#include \u003ciostream\u003e \nusing namespace std; \ntemplate \u003ctypename T\u003e \nT max(T x, T y) \n{ return (x \u003e y) ? x : y;} \nint main() \n{ cout \u003c\u003c max(3, 7) \u003c\u003c std::endl; \ncout \u003c\u003c max(3.0, 7.0) \u003c\u003c std::endl; \ncout \u003c\u003c max(3, 7.0) \u003c\u003c std::endl;\n return 0; \n  },\n da w, rezultacie}",
+    "answers": [
+      "Błąd kompilacji ze względu na brak typu danych w wywołaniu funkcji szablonowej ",
+      "Błąd kompilacji ze względu na niejednoznaczność trzeciego wywołania funkcji max",
+      "Żadne z powyższych(przysłonięcie funkcji max, bo jest std)",
+      "Wartości 7, 7.0, 7.0 "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 45,
+    "question": "Która, z poniższych instrukcji występuje <strong>tylko w paradygmacie imperatywnym i, pochodnych </strong>",
+    "answers": [
+      "wywołania funkcji ",
+      "deklaracji ",
+      "warunkowa ",
+      "pętli "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 46,
+    "question": " Za pomocą którego wyrażenia języka Scheme uzyskano poniższą strukturę:",
+    "answers": [
+      "(cons 1 (cons (cons 2 (cons 3 empty)) (cons (cons 5 empty) (cons 4 empty)))) ",
+      "(list 1 2 3 4 5) ",
+      "(cons 1 (cons (cons 2 3) (cons 5 4))))  ",
+      "(cons 1 (cons 2 (cons 3 (cons 4 (cons 5 empty))))) "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0,
+    "image": {
+      "url": "46.png",
+      "description": "to xD"
+    }
+  },
+  {
+    "id": 47,
+    "question": "Które wyrażenie rachunku lambda (wzbogaconego instrukcję iloczynu) będzie miało to samo znaczenie, co instrukcja języka <strong>Scheme: (let* ((x 2) (y 3)) (* x y))</strong>",
+    "answers": [
+      "λx.λy.(* x y) 3 2",
+      "λx.[λy.(*x y)] 3 2",
+      "λx.[λy.(*x y)] 2 3 ",
+      "λx.λy.(* x y) 2 3 "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 48,
+    "question": "<strong>Programowanie generyczne </strong>pozwala na",
+    "answers": [
+      "napisanie jednego kodu dla różnych algorytmów ",
+      "napisanie jednego kodu dla różnych nazw zmiennych ",
+      "nie ma czegoś takiego",
+      "napisanie jednego kodu dla różnych typów danych "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 49,
+    "question": "<strong>Środowisko odniesienia </strong>jest to:",
+    "answers": [
+      "zbiór dostępnych zmiennych w danym miejscu programu",
+      "zbiór dostępnych funkcji w danym miejscu programu",
+      "zbiór dostępnych stałych w danym miejscu programu",
+      "zbiór dostępnych wiązań w danym miejscu programu "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 50,
+    "question": "Wyrażeniu języka <strong> C#: (x,y)=>(x*2)+(y*3)</strong> w języku Scheme odpowiada wyrażenie",
+    "answers": [
+      "(define f ( lambda (x y) ((x*2)+(y*3))))",
+      "(lambda (x y) ((x*2)+(y*3))) ",
+      "(lambda (x y) (+ (* x 2) (* y 3))) ",
+      "(define f ( lambda (x y) (+ (* x 2) (* y 3))))  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  }
+]
+
