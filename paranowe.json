@@ -1,0 +1,736 @@
+﻿[
+  {
+    "id": 1,
+    "question": "Dana jest funkcja: \nVoid StworzSamochod(IFactory&lt;Car&gt;fabryka)\n{ Car car = fabryka.Create();}\nAby móc do niej przekazać obiekt klasy class Factory : IFactory&lt;Truck&gt; {}, gdzie klasa Truck dziedziczy po Car, interfejs IFactory musi być:",
+    "answers": [
+      "Kontrawariantny ",
+      "Kowariantny ",
+      "Inwariantny ",
+      "Abstrakcyjny "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 2,
+    "question": "Niemodyfikowalność danych oznacza, że:",
+    "answers": [
+      "Dane mogą być dowolnie zmieniane ",
+      "Dane mogą być zmieniane po ustawieniu, ale tylko raz",
+      "Dane nie mogą być zmienianie po ich ustawieniu",
+      "Żadne z wymienionych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 3,
+    "question": "Funkcję, która ma być uruchomiona po zakończeniu zadania Z możemy przypisać do niego za pomocą metody ContinueWith",
+    "answers": [
+      "Tylko przed uruchomieniem zadania Z",
+      "Tylko po uruchomieniu zadania Z",
+      "W dowolnym momencie po utworzeniu zadania Z",
+      "Tylko po zakończeniu zadania Z "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 4,
+    "question": "Efektem ubocznym programowania funkcyjnego może być: ",
+    "answers": [
+      "Większe zużycie pamięci",
+      "Większe zużycie mocy obliczeniowej procesora",
+      "Oba wymienione",
+      "Żadne z wymienionych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 5,
+    "question": "Która operacja tworzy funkcję sumującą elementy na liście:",
+    "answers": [
+      "let rec sumuj = function |[]->0|x::xs->x+sumuj xs",
+      "let rec sumuj x xs = function |[]->0|x::xs->x+sumuj xs",
+      "let sumuj x xs = []->0 | x::xs->x+sumuj xs",
+      "let sumuj = function |[]->0|x::xs->x+sumuj xs"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 6,
+    "question": "Kiedy operacja pośrednia LINQ np. Where jest uruchamiana: ",
+    "answers": [
+      "Kiedy wywoływana jest funkcja uruchamiająca przepływ danych np. Single",
+      "Kiedy jest dołączona do przepływu danych",
+      "Kiedy strumień danych jest zamykany metodą Close   ",
+      "W zestawie z innymi operacjami zależnie od ustawień kompilatora"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 7,
+    "question": "Metody rozszerzające możemy definiować:",
+    "answers": [
+      "Tylko dla typów wartościowych",
+      "Dla wszystkich typów ",
+      "Tylko dla typów referencyjnych",
+      "Tylko dla typów wbudowanych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 8,
+    "question": "Którą z poniższych deklaracji poprawnie zdefiniuje operator konwersji zawsze wywoływany jawnie: ",
+    "answers": [
+      "Public static explicit operator int(Kwota k)\n { return 0; }",
+      "Public static explicit int(Kwota k)\n { return 0; }",
+      "Public static implicit operator int(Kwota k) \n { return 0; } ",
+      "Public explicit operator int(Kwota k)\n { return 0; }"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 9,
+    "question": "Aplikacja częściowa jest to: ",
+    "answers": [
+      "Element nieobecny w programowaniu ",
+      "To samo co funkcja częściowa",
+      "Sposób na uruchomienie tylko fragment funkcji ",
+      "Proces aplikacji funkcji tylko dla części parametrów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 65,
+    "question": "który fradment kodu jest poprawny",
+    "answers": [
+      "let fun = if x<= than 1 else x+fun(x+1);;",
+      "let rec fun x =if x<= than 1 else x+fun(x+1);;",
+      "let x=if x<= than 1 else x+fun(x+1);;",
+      "let fun x=if x<= than 1 else x+fun(x+1);;"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 11,
+    "question": " Funkcję wyższych rzędów są funkcjami, które działają na funkcjach:",
+    "answers": [
+      "Zależnie od ustawień kompilator",
+      "Zależnie od parametrów funkcji",
+      "Nie ",
+      "Tak "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 12,
+    "question": "Niech dane będą funkcje:\nlet liczbaZnakow str = Some(String.length str)\nlet razy2 x = Some(x•2) ich złożenia można dokonać za pomoca.",
+    "answers": [
+      "standardowego operatora >>",
+      "funkcji Option.bind",
+      "funkcji Option.compose",
+      "żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 13,
+    "question": "Które z poniższych operacji jest przykładem funkcji czystej:",
+    "answers": [
+      "Zwrócenie aktualnej daty ",
+      "Zwrócenie wartości losowej",
+      "Ustawienie zmiennej globalnej ",
+      "Zwrócenie długości listy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 14,
+    "question": "Co oznacza, że F# jest jzykiem statycznie typowanym: ",
+    "answers": [
+      "Nie trzeba jawnie określać typu każdej zmiennej w programie",
+      "Funkcje nie wyznaczają wartości swoich argumentów",
+      "F# jawnie obsługuje monady",
+      "Każde wyrażenie F# ma typ, okre[lony podczas kompilacji"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 15,
+    "question": "W celu zastosowania walidacji rekordu F#, która zwraca wszystkie komunikatory o błedach jednoczesnie, najlepiej zastosować wzorzec",
+    "answers": [
+      "funktora",
+      "monady",
+      "aplikowany",
+      "monoidu"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 16,
+    "question": " Po prawej stronie operatora |> języka F# może: ",
+    "answers": [
+      "Obiekt ",
+      "Stała ",
+      "Pojawić się funkcja jednoargumentowa ",
+      "Pojawić się funkcja dwuargumentowa"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 17,
+    "question": "Do czego służy operator <<<| w F#?",
+    "answers": [
+      "do dodawania dwóch liczb w F#  ",
+      "do porównywania dwóch wartości w F# ",
+      "do dzielenia liczb w F#",
+      "do kompozycji funkcji, gdzie wykonuje funkcję g na wyniku funkcji f"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 18,
+    "question": "Złożenie funkcji w języku F# jest realizowane poprzez operator:",
+    "answers": [
+      ">>",
+      "|>",
+      "||>",
+      ">"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 19,
+    "question": "Funkcje czyste umożliwiają zmianę stanu systemu: ",
+    "answers": [
+      "Zależnie od parametrów funkcji ",
+      "Zależnie od ustawień kompilatora ",
+      "Nigdy ",
+      "Zawsze "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 20,
+    "question": "Dlaczego programowanie funkcyjne wykorzystuje rekurencję zamiast pętli",
+    "answers": [
+      "Funkcje rekurencyjne są prostsze od zapisania ",
+      "Pętle wymagają modyfikowalnego stanu aplikacji",
+      "Wywołania funkcji są szybsze niż ptle",
+      "Żadne z wymienionych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 21,
+    "question": "Instrukcja języka F#:lista1@lista2 gdzie lista1 i lista2 to listy:",
+    "answers": [
+      "Modyfikuje listę lista1",
+      "Modyfikuje listę lista2",
+      "Tworzy nową listę",
+      "Modyfikcuje listę lista1 i usuwa lista2"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 22,
+    "question": "Polecenie let f=fun x y -> fun a -> x+y+a języka F# tworzy:",
+    "answers": [
+      "jedną funckję trzech prarametrów x,y,a",
+      "funkjce rekureyncją",
+      "funkcję wyższych rzędów",
+      "żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 23,
+    "question": "Brak wartości może być osłużona w F# za pomocą typu:",
+    "answers": [
+      "Option",
+      "NullResult",
+      "Nullable",
+      "NonValue"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 24,
+    "question": "Dana jest funkcja let f x y=x+y. Co zostanie zwrócone w przypadku następującego jej wyłonania f 1",
+    "answers": [
+      "Nic, nie można tej funkcji tak wywołac",
+      "Nic, ta funckja jest źle zdefiniowana",
+      "Inna funckja",
+      "1, ponieważ parametr y będzię miał domyślnie 0"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 25,
+    "question": "Operator >> w F# służy do:",
+    "answers": [
+      "Odczytywanie danych ze strumienia",
+      "Tworzenia nowej funkcji poprzez złąenie dwóch istniejących",
+      "Odwrócenie kolejności przekazanych parametrów",
+      "Ścisłego porównania"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 26,
+    "question": "Która, z poniższych instrukcji języka F# deklaruje listę 3 elementową:",
+    "answers": [
+      "let x=1::2::3",
+      "let x=[1..2..3]",
+      "let x=[0..4]",
+      "let x=1::2::3::[]"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 27,
+    "question": "Jakie operacje są niedopuszczalne w języku F#",
+    "answers": [
+      "Jawnej konwersji",
+      "Niejawnej konwersji",
+      "Dopasowania wzorów",
+      "Wszystkie z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 28,
+    "question": "Która deklaracja tworzy funkcję zliczającą elementy na liście:",
+    "answers": [
+      "let rec f=function |[]->0|x::xs ->1+f xs",
+      "let rec f x xs=function |[]->0| x::xs->1+f xs",
+      "let f x:xs=[]->0|x:xs->1+f xs",
+      "let f=function |[]->0|x::xs->1+f xs"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 29,
+    "question": "W języku F# funkcja let dodaj x y=x+y ma typ:",
+    "answers": [
+      "a:int->b:int->int",
+      "a,b:int->int",
+      "(a:int,b:int)->int",
+      "int"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 30,
+    "question": "Efekty uboczne w językach programowania",
+    "answers": [
+      "ułatwiają analizę sposobu działania programu",
+      "utrudniają anilizę sposobu działania programu",
+      "nie występują w językach imperatywnych",
+      "występują w językach czysto funkcyjnych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 31,
+    "question": "Za pomocą instrukcji możemy zmienić składową imie rekordu:\nlet osoba={imie:\"Ala\";nazwisko:\"kot\"}",
+    "answers": [
+      "osoba.imie=\"Ewa\"",
+      "osoba.imie<-\"Ewa\"",
+      "osoba.imie:=\"Ewa\"",
+      "żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 32,
+    "question": "Ile argumentów należy przekazać do poniższej funckji, aby się wykonała:\n let f x=function Some y->x+y|None->",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "Funckja jest błędna"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 33,
+    "question": "Funkcje wyższych rzędów to funkcje, które",
+    "answers": [
+      "zawsze mają więcej niż jeden parametr",
+      "mają co najmniej jeden parametr, którego wartość musi być funkcją lub funkcje zwracają",
+      "zawsze zwracają więcej niż jedną wartość",
+      "są inaczej nazywane funkcjami generyczynmi"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 34,
+    "question": "Który z poniższych zapisów wymusi na programiście konieczność podania wszystkich argumentów funkcji jednocześnie:",
+    "answers": [
+      "let dodaj x y z=x+y+z",
+      "let dodaj (x,y,z)=x+y+z",
+      "let dodaj x;y;z=x+y+z",
+      "[<at_once>]let dodaj x y z=x+y+z"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 35,
+    "question": "Domknięcie jest to:",
+    "answers": [
+      "Konstukcja programowania występująca w C++",
+      "Inna nazwa funkcji pierwszej klasy",
+      "Funkcja połączona z leksykalnym środowiskiem tej funkcji",
+      "Specjalna dyrektywa kompilatora"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 36,
+    "question": "Funkcja zlacz(bind) dla typu Option<`T> będzie miała sygnaturę:",
+    "answers": [
+      "zlacz:Option<`T>->(`T->Option<`R>)->Option<`R>",
+      "zlacz:`T->(`T->Option<`R>)->Option<`R>",
+      "zlacz:Option<`T>->(`T->`R)->Option<`R>",
+      "zlacz:Option<`T>->(`T->Option<`R>->`R)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 37,
+    "question": "Które polecenie języka F# tworzy funckję wyższych rzędów",
+    "answers": [
+      "let f a x y=a+x+y",
+      "let f=fun a x y->a+x+y",
+      "let f=fun x y: fun a -> a+x+y",
+      "let f=fun x y -> fun a -> a+x+y"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 38,
+    "question": "Efekty uboczne nigdy nie występują w funkcjach",
+    "answers": [
+      "statystycznych",
+      "publicznych",
+      "czystych",
+      "bez parametrowych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 39,
+    "question": "W F# będących iloczynem kartezjańskim, w którym każda składowa ma swoją nazwę nazywamy:",
+    "answers": [
+      "unią z dyskryminantem",
+      "rekordem",
+      "krotką",
+      "nie ma takich typów danych w F#"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 40,
+    "question": "N-tką (krotką) w F# nazywamy uporządkowanym zbiór wartości, w którym",
+    "answers": [
+      "wszystkie elementy są tego tego samego typu",
+      "elementy muszą być zawsze róznych typów",
+      "elementy sa tego samego lub róznych typów",
+      "może nie być elementów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 41,
+    "question": "Funkcje rekurencyjne definiujemy w F# za pomocą:",
+    "answers": [
+      "let",
+      "fun",
+      "let rec",
+      "let recursive"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 42,
+    "question": "Polecenie let f=fun x y a -> x+y+a języka F# tworzy:",
+    "answers": [
+      "funkcję wyższych rzędów",
+      "funkcję rekurenyjną",
+      "jedną funckję trzech parametrów x,y,a",
+      "żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 43,
+    "question": "W celu obsługi wartości opcjonalych w programach w języku F# najlepiej użyć",
+    "answers": [
+      "Monady Maybe",
+      "Monady State",
+      "Monady Either",
+      "Typu Nullable"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 44,
+    "question": "Rezultat obliczeń, które mogą zakończyć się błędem, w F# może być poisany za pomocą wbudowanego typu:",
+    "answers": [
+      "Result",
+      "Error",
+      "Option",
+      "ExceptionResult"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 45,
+    "question": "Operator |> w F# służy do:",
+    "answers": [
+      "Odczytywania danych ze strumienia",
+      "Odwrócenie koljeności przekazywania paramtrów",
+      "Tworzenie nowej funkcji poprzez złączenie dwóch instniejących",
+      "Ścisłego porównania"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 46,
+    "question": "W F# typ zdefinowany następująco type Opcja=Jest of string |Brak:",
+    "answers": [
+      "rekordem",
+      "unią z dyskryminatem",
+      "krotką",
+      "nie ma takich typów danych w F#"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 47,
+    "question": "Języki domenowe wewnętrzne:",
+    "answers": [
+      "Nie istnieją",
+      "Wymagają specjalnych narzędzi do definiowania",
+      "Korzystają z mechanizmów języka w którym są definiowane",
+      "Nie mogą być implementowane w C#"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 48,
+    "question": "Funkcje, które określamy „czystymi” są to funkcje, które:",
+    "answers": [
+      "Są abstrakcyjne",
+      "Nie mają efektów ubocznych, a ich rezultat zależy tylko od parametrów",
+      "Nie przyjmują parametrów",
+      "Występują tylko w klasach statycznych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 49,
+    "question": "Na podstawie instrukcji F# vss |> f 12 możesz powiedzieć, że",
+    "answers": [
+      "Symbol f powinien być funkcją jednego parametru",
+      "Żadne z wymienionych",
+      "Symbol f powinien być funkcją co najmniej dwóch parametrów",
+      "Jest błędna"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 50,
+    "question": "Dana jest funkcja let f x y = x + y\nKtóra z poniższych deklaracji stworzy taką samą funkcję:",
+    "answers": [
+      "let f (x, y) = x + y",
+      "let x = fun y -> x = y",
+      "let f = fun x -> fun y -> x + y",
+      "let y = fun x -> x + y"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 50,
+    "question": "Wyrażenie języka F#\nlet i = funkction\n| (false, _) -> false\n| (true, x) -> x\nTworzy:",
+    "answers": [
+      "Funkcję jednego parametru o nazwie x",
+      "Funkcje dwóch parametrów",
+      "Funkcje bezparametrową",
+      "Funkcję jednego parametru"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 5
+  },
+  {
+    "id": 51,
+    "question": "Zamianę kolekcji wartości na pojedynczą wartość określamy jako",
+    "answers": [
+      "Mapowanie",
+      "Filtrowanie",
+      "Agregację",
+      "Złączenie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 52,
+    "question": "Która z poniższych instrukcji F# stworzy funkcję dwóch parametrów",
+    "answers": [
+      "let f x, y = x + y",
+      "let f x = fun() -> 12",
+      "let f x y = x + y",
+      "let f (x, y) = x + y"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 53,
+    "question": "Które z poniższych zdań jest prawdziwe",
+    "answers": [
+      "Lista w F# jest odpowiednikiem klasy List<> w C#",
+      "Lista w F# jest modyfikowalną kolekcją elementów tego samego typu",
+      "Lista w F# jest modyfikowalną kolekcją elementów możliwie różnego typu",
+      "Lista w F# jest niemodyfikowalną kolekcją elementów tego samego typu"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 54,
+    "question": "Operator L1@L2:",
+    "answers": [
+      "Modyfikuje listę L1",
+      "Tworzy nową listę bez modyfikacji istniejących",
+      "Modyfikuję listę L2",
+      "Modyfikuję listę L1 lub L2 w zależności od ich elementów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 55,
+    "question": "Które wyrażenie języka F# stworzy poprawnie listę 3 elementową",
+    "answers": [
+      "1::2::3;;",
+      "[1..2..3];;",
+      "[1;2;3];;",
+      "[1, 2, 3];"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 56,
+    "question": "Sumowanie wszystkich elementów na liście jest przykładem operacji:",
+    "answers": [
+      "Mapowania",
+      "Filtrowania",
+      "Żadne z powyższych",
+      "Agregacji"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 57,
+    "question": "Który fragment kodu jest poprawny:",
+    "answers": [
+      "let fun = if x<=1 then 1 else x + fun (x-1);;",
+      "let rec fun = if x<=1 then 1 else x + fun (x-1);;",
+      "let x = if x<=1 then 1 else x + fun (x-1);;",
+      "let fun x = if x<=1 then 1 else x + fun (x-1);;"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 58,
+    "question": "Instrukcja języka F#:\ntype Operator =\n| Plus\n| Minus\nTworzy:",
+    "answers": [
+      "Rekord",
+      "Klasę",
+      "Enumerację",
+      "Unie z dyskryminatorem"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 59,
+    "question": "Niech dana będzie lista L. Operacja mapowania zwróci nową listę, która",
+    "answers": [
+      "Jest krótsza od listy L",
+      "Jest dłuższa od listy L",
+      "Może być krótsza lub dłuższa w zależności od funkcji, która będzie do niej przekazana",
+      "Ma tę samą długość co lista L"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 60,
+    "question": "Czyste funkcje są to funkcje, które:",
+    "answers": [
+      "Nie zmieniają stanu aplikacji",
+      "Zmieniają dowolnie stan aplikacji",
+      "Zmieniają stan aplikacji, ale programista jest tego świadomy",
+      "Inaczej są nazywane wyrażeniami lambda"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  }
+
+]
+

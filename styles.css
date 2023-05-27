@@ -15,6 +15,7 @@ ul {
 
 li {
     margin-bottom: 10px;
+    white-space: pre-wrap;
 }
 
 button {
@@ -46,9 +47,8 @@ button:hover {
     margin-top: 20px;
 }
 
-.question-text, .answer-text {
-    font-size: 20px;
-    white-space: pre;
+.answer-text {
+    font-size: 20px; /* Adjust the font size if needed */
 }
 
 .score-text {
@@ -63,19 +63,25 @@ button:hover {
     border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 10px;
-    width: 100%;
     cursor: pointer;
+    text-align: center;
+    max-width: 100%;
 }
 
+
 .custom-answer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #000;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-bottom: 10px;
     width: 100%;
+}
+
+label {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.question-text {
+    font-size: 20px;
+    word-wrap: break-word;
 }
 
 .hidden {
@@ -91,12 +97,14 @@ button:hover {
 }
 
 #quizContentContainer, #resultsContainer {
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4); /* Kolor tła ramki z przezroczystością 40% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-top: 20px;
+  overflow-wrap: break-word; /* Zawijanie długich linii tekstu */
 }
+
 
 #quizContentContainer {
     display: none;
@@ -169,17 +177,23 @@ h3 {
 }
 
 .question-container {
-    font-size: 28px; /* Powiększ czcionkę */
-    padding: 8px; /* Dodaj wewnętrzne marginesy dla tekstu */
-    display: flex;
+    font-size: 28px;
+    /* Powiększ czcionkę */
+    padding: 8px;
+    /* Dodaj wewnętrzne marginesy dla tekstu */
+    display: inline-block;
+    /* Dodaj display: inline-block */
     align-items: center;
     justify-content: center;
-    border: 2px solid transparent; /* Zmień kolor ramki na przezroczysty */
+    border: 2px solid transparent;
+    /* Zmień kolor ramki na przezroczysty */
     border-radius: 5px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    text-align: center; /* Wyśrodkuj tekst */
-    white-space: pre-wrap; /* Pozwól na zawijanie tekstu */
+    text-align: center;
+    /* Wyśrodkuj tekst */
+    white-space: pre-wrap;
+    /* Pozwól na zawijanie tekstu */
 }
 
 #newQuiz, #showResults {
@@ -211,4 +225,29 @@ h3 {
 
 body {
     animation: animatedBackground 40s linear infinite;
+}
+
+
+.quiz-link {
+    color: #007bff; /* Kolor tekstu */
+    text-decoration: none; /* Brak podkreślenia */
+    font-weight: bold; /* Pogrubienie tekstu */
+    font-size: 23px;
+}
+
+/* Efekt po najechaniu na link */
+.quiz-link:hover {
+    color: #0056b3; /* Kolor tekstu po najechaniu */
+    text-decoration: underline; /* Podkreślenie po najechaniu */
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container1 {
+    outline: 2px solid transparent; /* Grubość i kolor obramowania przezroczystego */
+    background-color: rgba(255, 255, 255, 0.3); /* Kolor tła ramki z przezroczystością 40% */
+    padding: 10px; /* Odstęp wewnątrz kontenera */
 }
