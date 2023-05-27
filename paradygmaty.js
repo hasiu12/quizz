@@ -19,11 +19,12 @@ let isFirstQuiz = true;
 
 // Funkcja pobieraj¹ca dane z pliku JSON
 async function fetchData() {
-    console.log('Fetching quiz data...');
-    if (!initialDataLoaded) {
+    
+    if (!initialDataLoaded || variant) {
+        console.log('Fetching quiz data...');
         try {
             // Pobierz dane z JSONbin.io
-            const response = await fetch('https://api.jsonbin.io/v3/b/646ba7f38e4aa6225ea202b1', {
+            const response = await fetch('https://api.jsonbin.io/v3/b/646e4b2a8e4aa6225ea3710e', {
                 headers: {
                     'X-Master-Key': '$2b$10$BbsRmIDNnUiQ7WXSyaL.HuG/KKFiqa5.2mnBS2v3nzTA60pusrz1.'
                 }
@@ -59,7 +60,7 @@ document.getElementById('startQuiz').addEventListener('click', function () {
     updateStatsDisplay();
     visualNewQuizz();
     // Pobierz dane z pliku JSON
-    if (!initialDataLoaded || variant === true) {
+    if (!isFirstQuiz) {
         variant = false;
         isFirstQuiz = false;
         fetchData();
@@ -218,43 +219,52 @@ function updateButtonsVisibility() {
 
 // Funkcja tworz¹ca element HTML z odpowiedzi¹
 function createAnswerElement(answer, index, shuffledIndex) {
-    const li = document.createElement('li');
-    const input = document.createElement('input');
-    const label = document.createElement('label');
+    const li = document.createElement('li'); // Stwórz element listy
+    const input = document.createElement('input'); // Stwórz element input
+    const label = document.createElement('label'); // Stwórz element label
     const answerContainer = document.createElement('div');
 
+    // Ustaw atrybuty dla elementu input
     input.type = 'radio';
     input.name = 'answer';
     input.value = index;
     input.id = `answer-${index}`;
 
+    // Ustaw atrybuty dla elementu label
     label.htmlFor = `answer-${index}`;
     label.textContent = answer;
-    label.classList.add('answer-text');
 
-    // Dodaj styl dla elementu label, aby zawijał tekst
-    label.style.overflowWrap = 'break-word';
-    label.style.wordBreak = 'break-word';
-    label.style.maxWidth = '100%';
-
+    // Dodaj zdarzenie click do elementu answerContainer
     answerContainer.addEventListener('click', () => {
+        // SprawdŸ, czy input nie jest ju¿ zaznaczony
         if (!input.checked) {
+            // Jeœli nie, zaznacz go
             input.checked = true;
         }
     });
 
+    // Dodaj zdarzenie click do elementu input
     input.addEventListener('click', (event) => {
+        // Zapobiegaj podwójnemu wywo³aniu zdarzenia click
         event.stopPropagation();
     });
 
+    // Dodaj klasê 'answer-container' do elementu answerContainer
     answerContainer.classList.add('answer-container');
+    // Dodaj element input do answerContainer
     answerContainer.appendChild(input);
+
+    // Dodaj elementy input i label do elementu listy
     answerContainer.appendChild(label);
     li.appendChild(answerContainer);
 
-    return li;
-}
+    // Aktualizacja atrybutów elementu label
+    label.htmlFor = `answer-${index}`;
+    label.textContent = answer;
+    label.classList.add('answer-text'); // Dodaj klasê 'answer-text'
 
+    return li; // Zwróæ element listy z odpowiedzi¹
+}
 
 function endQuiz() {
     // Sprawdzanie ostatniej odpowiedzi
@@ -290,29 +300,6 @@ function endQuiz() {
 }
 
 
-// Funkcja zamieniaj¹ca ostatni¹ odpowiedŸ na "¿adne z powy¿szych"
-function replaceLastAnswerWithNone(answersElement, answers) {
-    const noneExists = checkIfNoneExists(answers);
-    const allExists = checkIfAllExists(answers);
-
-    if (!noneExists && !allExists) {
-        const lastIndex = answers.length - 1;
-
-        // Pobierz ostatni element odpowiedzi
-        const lastAnswer = answersElement.children[lastIndex];
-        const input = lastAnswer.querySelector('input');
-        const label = lastAnswer.querySelector('label');
-
-        // Zaktualizuj atrybuty dla ostatniej odpowiedzi
-        input.value = -1;
-        input.id = `answer-${lastIndex}`;
-        label.htmlFor = `answer-${lastIndex}`;
-        label.textContent = '\u017badne z powy\u017cszych';
-
-        // Zaktualizuj listê odpowiedzi
-        answers[lastIndex].answer = '¿adne z powy¿szych';
-    }
-}
 
 // Funkcja resetuj¹ca zaznaczenie odpowiedzi
 function resetAnswer() {
@@ -348,7 +335,7 @@ function handleNumericKeyPress(event, answersCopy) {
 
 function checkIfNoneExists(answers) {
     for (const answer of answers) {
-        if (answer.toLowerCase() === 'żadne z powy¿szych') {
+        if (answer.toLowerCase() === 'żadne z wymienionych' || answer.toLowerCase() === 'żadne z powyższych') {
             return true;
         }
     }
@@ -357,11 +344,17 @@ function checkIfNoneExists(answers) {
 
 function checkIfAllExists(answers) {
     for (const answer of answers) {
-        if (answer.toLowerCase() === 'wszystkie powyższe') {
+        if (answer.toLowerCase() === 'wszystkie powyższe' || answer.toLowerCase() === 'wszystkie z powyższych') {
             return true;
         }
     }
     return false;
+}
+
+function checkIfNoneOrAllExists(answers) {
+    const noneExists = checkIfNoneExists(answers);
+    const allExists = checkIfAllExists(answers);
+    return noneExists || allExists;
 }
 
 function showAllAnswers() {
@@ -463,7 +456,7 @@ async function displayQuestion() {
     const answersElement = document.getElementById('answers');
 
     // Ustaw treść pytania na stronie
-   // questionElement.classList.add('question-container');
+    questionElement.classList.add('question-container');
     questionElement.innerHTML = `Pytanie ${currentQuestion + 1}/${numberOfQuestions}<br>${quizData[currentQuestion].question}`;
 
     // Wyczyść listę odpowiedzi
@@ -493,11 +486,11 @@ async function displayQuestion() {
 
     questionElement.classList.add('question-text');
 
-
     // Jeśli jesteśmy przy ostatnim pytaniu, ukryj przycisk "Następne pytanie" i wyświetl przycisk "Zakończ quiz"
     updateButtonsVisibility();
     resetAnswer();
 }
+
 
 // Funkcja mieszająca elementy tablicy
 function shuffleArray(array) {
@@ -524,11 +517,11 @@ function shuffleArray1(array) {
         }
 
         if (allExists) {
-            const allIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'wszystkie powyższe');
+            const allIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'wszystkie z powyższych' || answer.toLowerCase() === 'wszystkie z wymienionych');
             [array[noneExists ? 3 : 4], array[allIndex]] = [array[allIndex], array[noneExists ? 3 : 4]];
         }
         if (noneExists) {
-            const noneIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'żadne z powyższych');
+            const noneIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'żadne z powyższych' || answer.toLowerCase() === 'żadne z wymienionych');
             [array[array.length - 1], array[noneIndex]] = [array[noneIndex], array[array.length - 1]];
         }
     }
@@ -584,7 +577,7 @@ function podzielPytaniaNaQuizy(pytania, liczbaQuizow, pytaniaNaQuiz) {
 }
 
 function generateQuizzes(allQuestions) {
-    const numberOfQuizzes = 10;
+    const numberOfQuizzes = 6;
     const questionsPerQuiz = numberOfQuestions;
 
     for (let i = 0; i < numberOfQuizzes; i++) {

@@ -357,7 +357,7 @@
       "Wyrażenie, które nie zawiera zmiennych wolnych "
     ],
     "explanation": "todo",
-    "correctAnswer":0
+    "correctAnswer": 0
   },
   {
     "id": 31,
@@ -602,6 +602,606 @@
     ],
     "explanation": "todo",
     "correctAnswer": 2
+  },
+  {
+    "id": 51,
+    "question": "Który zestaw instrukcji w języku C# spowoduje uruchomienie zadania Y po zakończeniu wykonywaniu zadania X",
+    "answers": [
+      "Tast t = new Task(Y); t.CallBefore(X); t.Start();",
+      "Tast t = new Task(Y); t.ContinueWith<y>; t.Start();",
+      "Tast t = new Task(Y); t.ContinueWith(Y); t.Start();",
+      "Tast t = new Task(Y); t.CallAfter(Y); t.Start();"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 52,
+    "question": "Dany jest kod w C#:\nClass Stos<T> {\nT[] bufor = new T[10];\nint gora = 0;\nPublic bool Sprawdz(T x) {\nReturn bufor[gora – 1].CompareTo(x);\n}\n}\nAby był on poprawny należy:",
+    "answers": [
+      "Zaimplementować w klasie Stos interfejs IComparable",
+      "Zaimplementować w klasie Stos dziedziczenie po klasie Comparable",
+      "Zmienić koncepcję programu, ponieważ w C# nie można tworzyć typów generycznych",
+      "Nałożyć odpowiednie ograniczenia na typ T"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 53,
+    "question": "Jakie elementy może zawierać klasa C# jeżeli jest zadeklarowana jako static:",
+    "answers": [
+      "Elementy statyczne i przeciążenia metod instancji",
+      "Elementy statyczne i instancji",
+      "Tylko elementy statyczne",
+      "Tylko statyczne pola i właściwości, ale nie statyczne metody"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 54,
+    "question": "Które z poniższych wyrażeń języka c# nazywamy wyrażeniem lambda",
+    "answers": [
+      "x => x",
+      "b > 12 ? 12 : x",
+      "y <= x++",
+      "y = x > 12"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 55,
+    "question": "Która z poniższych instrukcji C# pozwoli na wyznaczenie najmniejszego elementu w tablicy",
+    "answers": [
+      "Kolekcja.Aggregate((a, c) => a < c ? a : c)",
+      "Kolekcja.Aggregate((a, c) => a > c ? a : c)x",
+      "Kolekcja.Where(c => Math.Min(c))",
+      "Kolekcja.Select(c => Math.Min(c))"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 56,
+    "question": "Dane jest metoda C#: void Funkcja(Cunc<int, int>) {...}. Które z poniższych wywołań tej funkcji jest poprawne:",
+    "answers": [
+      "Funkcja(a => a.ToString())",
+      "Funkcja((a, b) => a + b)",
+      "Funkcja(a => a)",
+      "Funkcja(12)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 57,
+    "question": "Dany jest fragment programu:\nList<int> lista = new List{1, 2, 3, 4, 5, 6, 7}\nvar wynik = lista.Where(WiekszeNiz(3)).ToList();\n\nKtóry z poniższych fragmentów może przedstawić kod funkcji WiekszeNiz:",
+    "answers": [
+      "Func<int, bool> WiekszeNiz(int wartość) \n{return wartość < x;}",
+      "Func<int, bool> WiekszeNiz(int, Func<int, bool> pred) \n{return wartość < x;}",
+      "Int WiekszeNiz(int wartość, int x)\n {return IComparable.Compare(wartość, x);}",
+      "Func<int, bool> WiekszeNiz(int wartość)\n {return (x) => wartość < x;}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 58,
+    "question": "Metoda Select z Linq zwraca",
+    "answers": [
+      "Żadne z wymienionych",
+      "Kolekcję typu lista",
+      "Kolekcję leniwą",
+      "Kolekcję typu tablica"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 59,
+    "question": "Poniższa instrukcja\nVar rezultat =\n( from v in listaLosowa\nwhere v > 10\nselect v * v\n).ToList()\nWykorzystuje zapytanie:",
+    "answers": [
+      "Prologu",
+      "Linq",
+      "XML",
+      "SQL"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 60,
+    "question": "W C# możemy tworzyć aplikacje zgodne:",
+    "answers": [
+      "Tylko z paradygmatami programowania funkcyjnego",
+      "Tylko z paradygmatami programowania obiektowego",
+      "Z paradygmatami programowania obiektowego i funkcyjnego",
+      "Z paradygmatami programowania obiektowego i logicznego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 61,
+    "question": "Które z poniższych fragmentów kody pozwoli na zapis 1.Godzina():",
+    "answers": [
+      "static class Extensions {\nstatic TimeSpan Godzina(this TimeSpan v) => throw new NotImpelemtedException()\n}",
+      "static class Extensions {\npublic static TimeSpan Godzina(int v) => throw new NotImpelemtedException()\n}",
+      "class Extensions {\npublic int Godzina(this TimeSpan v) => throw new NotImpelemtedException()\n}",
+      "static class Extensions {\npublic static static TimeSpan Godzina(this int v) => throw new\nNotImpelemtedException()\n}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 62,
+    "question": "Ograniczenia nałożone na zmienną typu w C# wymieniamy po słowie kluczowym:",
+    "answers": [
+      "where",
+      "constraint",
+      "when",
+      "filter"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 63,
+    "question": "Odpowiednikiem funkcje wyższych rzędów w programowaniu obiektowym",
+    "answers": [
+      "Nie mają odpowiednika",
+      "Jest wzorzec Strategi",
+      "Jest wzorzec Wyboru",
+      "Jest wzorzec Budowniczy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 64,
+    "question": "W której z poniższych deklaracji interfejsu, zmienna typu T może być wykorzystywana tylko jako rezultat zdefiniowanych w nim metod lub właściwości:",
+    "answers": [
+      "Interface IPrzyklad {}",
+      "Interface IPrzyklad<int T> {}",
+      "Interface IPrzyklad<out T> {}",
+      "Interface IPrzyklad<T> {}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 65,
+    "question": "Dany jest kod:\nclass Program {\nstatic IEnumerable<int> Iter() {\nyield return 1;\nyield return 2;\nyield return 3;\n}\nStatic void Main(string[] args) {\nint i = 0;\nforeach (var x in Iter()) {\ni++;\n}\nConsole.WriteLine(i);\n}\n}\n\nSpowoduje on wyświetlenie na ekranie:",
+    "answers": [
+      "Błędu przepełnienia stosu",
+      "0",
+      "1",
+      "3"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 65,
+    "question": "Niech dana będzie lista L. Operacja filtrowania zwróci nową listę, która:",
+    "answers": [
+      "Jest dłuższa od listy L",
+      "Może być krótsza lub dłuższa w zależności od funkcji, która będzie do niej przekazana",
+      "Ma zawsze tę samą długość co lista L",
+      "Nie jest dłuższa od listy L"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 66,
+    "question": "Do której z poniższych właściwości wartość można przypisać tylko w konstruktorze",
+    "answers": [
+      "public int X {get;}",
+      "public int X {get; set;}",
+      "public int X {private get; set;} ",
+      "public int X {get; private set;}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 67,
+    "question": "Monada Maybe/Option jest wzorcem projektowym należącym do paradygmatu:",
+    "answers": [
+      "Obiektowego",
+      "Niskopoziomowego",
+      "Funkcyjnego ",
+      "Proceduralnego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 68,
+    "question": "Po wykonaniu ponioższego kodu:\nList<int> lista = new List<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\nvar y = (from x in lista where x % 2 == 0 select x);\ndo zmiennej y będzie przypisana",
+    "answers": [
+      "lista 5 elementowa",
+      "lista pusta",
+      "lista 10 elementowa ",
+      "coś innego niż lita"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 69,
+    "question": "Dany jest kod:\npublic interface IMojaKolekcja<T> {\nT Element();\n}\nJak zamienisz parametr typu T w kowariantny?",
+    "answers": [
+      "Zmienisz typ kolekcji na IMojaKolekcja<in T>",
+      "Zmienisz sygnaturę metody na: out T Element();",
+      "Zmienisz typ kolekcji na IMojaKolekcja<out T>",
+      "Zmienisz sygnaturę metody na: void Element(out T);"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 70,
+    "question": "Które zdanie jest prawdziwe:",
+    "answers": [
+      "Modyfikowany stan utrudnia tworzenie programów synchronicznych",
+      "Programowanie generyczne występuje tylko w językach obiektowych",
+      "Język F# jest zaliczany do programowania w logice",
+      "Modyfikowalny stan utrudnia tworzenie programów asynchronicznych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 71,
+    "question": "Monadą nazywamy typ, który będzie wyposażony w funkcję",
+    "answers": [
+      "Tylko Bind",
+      "Bind i Return",
+      "Tylko Return",
+      "Map"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 72,
+    "question": "Która deklaracja klasy jest poprawna:",
+    "answers": [
+      "class mojaKlasa where T: new() {}",
+      "class mojaKlasa<T> where T: new(int) {}",
+      "class mojaKlasa<T> where T: new(T) {}",
+      "class mojaKlasa<T> where T: new() {}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 73,
+    "question": "Która metoda języka C# jest poprawnie zdefiniowna:",
+    "answers": [
+      "async int Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\nreturn x;\n}",
+      "async void Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\n}",
+      "void Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\n}",
+      "int Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\nreturn x;\n}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 74,
+    "question": "Metody rozszerzające języka C# pozwalają rozszerzyć:",
+    "answers": [
+      "dowolny typ danych",
+      "tylko typy referencyjne",
+      "tylko typy wartościowa",
+      "tylko typy zapieczętowane"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 75,
+    "question": "Operator koniunkcji jest w Prologu zdefiniowany jako:",
+    "answers": [
+      "+",
+      ":=",
+      ".",
+      ","
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 76,
+    "question": "Zmienną, której typ jest wywnioskowany przez kompilator w języku C# tworzymy za pomocą słowa kluczowego",
+    "answers": [
+      "var",
+      "static",
+      "dynamic",
+      "def"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 77,
+    "question": "W języku C# instrukcja g(12, 23) + f(12, 23) == f(12, 23) + g(12, 23):",
+    "answers": [
+      "zawsze zwróci wartość true",
+      "zawsze zwróci wartość false",
+      "zwróci true lub false w zależności od postaci funkcji f i g",
+      "zwróci wartość true, ponieważ funkcje mają są wywołane z tymi samymi wartościamiparametrów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 78,
+    "question": "Słowo kluczowe fixed pozwala ",
+    "answers": [
+      "Ustawić funkcję w stałym miejscu pamięci",
+      "Ustawić właściwości w stałym miejscu pamięci",
+      "Ustawić zmienna w stałym miejscu pamięci",
+      "Żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 79,
+    "question": "Odpowiednikiem funkcji wyższych rzędów w programowaniu obiektowym jest wzorzec:",
+    "answers": [
+      "Fabryka abstrakcyjna",
+      "Obserwator",
+      "Memento",
+      "Strategia"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 80,
+    "question": "Operator mapowania jest w Linq zdefiniowany jako funkcja",
+    "answers": [
+      "Select",
+      "Map",
+      "Convert",
+      "Get"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 81,
+    "question": "Jeżeli chcesz w języku C# zdefiniować kilka zagadnień asynchronicznych i wymagasz, aby program wykonał się dalej po zakończeniu pierwszej z nich, wykorzystasz metodę:",
+    "answers": [
+      "Task.WaitForAny",
+      "Task.WaitForFirst",
+      "Task.WaitOne",
+      "Task.WaitAny"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 82,
+    "question": "Interfejs kontrawariantny jest definiowany instrukcją:",
+    "answers": [
+      "Interface IInterface<out T> {}",
+      "Interface IInterface<it T> {}",
+      "Interface IInterface<T> {}",
+      "Żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 83,
+    "question": "Instrukcja using static Przykład służy do",
+    "answers": [
+      "Zaimportowania do pliku wszystkich elementów statycznych przestrzeni nazw Przykład",
+      "Zaimportowania do pliku wszystkich elementów statycznych modułu Przykład",
+      "Zaimportowania do pliku wszystkich elementów statycznych klasy Przykład",
+      "Zaimportowania do pliku wszystkich elementów klasy Przykład"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 84,
+    "question": "Monady Either można użyć w programach napisanych w stylu funkcyjnym do",
+    "answers": [
+      "Przechowywania stanu",
+      "Przechowywania wartości opcjonalnych",
+      "Obsługi błędu",
+      "Obsługi operacji wejścia wyjścia"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 85,
+    "question": "Operator równości wartości numerycznych w prologu jest definiowany jako:",
+    "answers": [
+      "=:=",
+      "=",
+      "==",
+      ":=:"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 86,
+    "question": "Wyrażenie języka C#: x => x + 2 nazywane jest",
+    "answers": [
+      "Funkcją statyczną",
+      "Wyrażeniem lambda",
+      "Funkcją rozszerzającą",
+      "Nie ma takiego wyrażenie w języku C#"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 87,
+    "question": "Metoda Func<double, double> F (int f) {} jest:",
+    "answers": [
+      "Funkcją statyczną",
+      "Funkcją rozszerzającą",
+      "Funkcją generyczną",
+      "Funkcją wyższych rzędów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 88,
+    "question": "Po wykonaniu programu/nTask t = new/nTask(() => {Console.Write(„A”);}); t.Start(); t.Wait();/nConsole.Write(„B”);/nt.ContinueWith(c=>{Console.Write(„C”);});/nNa ekranie pojawi się:",
+    "answers": [
+      "BAC",
+      "AB",
+      "ABC",
+      "BA"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 89,
+    "question": "Operacja sortowania w Linq jest zdefiniowana",
+    "answers": [
+      "Order",
+      "SortBy",
+      "Sort",
+      "OrderBy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 90,
+    "question": "W interfejsach inwariantnych zmienna typu może pojawić się tylko jako",
+    "answers": [
+      "Tylko jako typ rezultatu funkcji",
+      "Tylko jako typ parametru funkcji",
+      "Żadne z powyższych",
+      "Jako rezultat i/lub parametr funkcji"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 91,
+    "question": "Typ string w języku C# jest typem:",
+    "answers": [
+      "Modyfikowalnym",
+      "Niemodyfikowalnym",
+      "Modyfikowalnym pod pewnymi warunkami",
+      "Żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 93,
+    "question": "Która instrukcja języka C# poprawnie deklaruje metodę rozszerzającą:",
+    "answers": [
+      "static class Klasa : IExtension {public static void F(Func<double, double> f) {} }",
+      "static class Klasa {public static void F(this double x) {} }",
+      "class Klasa : IExtension {public static void F(Func<double, double> f) {} }",
+      "class Klasa {public static void F(this double x) {} }"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 94,
+    "question": "Która metoda języka C# jest funkcją wyższych rzędów:",
+    "answers": [
+      "int F(this double x) {}",
+      "void F(ref double x) {}",
+      "object F(double x) {}",
+      "Func<double, double> F(int f) {}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 95,
+    "question": "W metodzie języka C#\nasync void Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\n}",
+    "answers": [
+      "Napis „Kominukat” wyświetli się po zakończeniu zadanie zwróconego przez metodą Metoda2",
+      "Napis „Kominukat” wyświetli się natychmiast po zakończeniu metody Metoda2",
+      "Napis „Kominukat” nie wyświetli się, ponieważ C# nie ma słowa kluczowego await",
+      "Napis „Kominukat” nie wyświetli się, ponieważ C# nie ma słowa kluczowego async"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 96,
+    "question": "W C# metoda iteratora, która umożliwi przejście do następnego elementu kolekcji nazywa się:  ",
+    "answers": [
+      "Yield",
+      "GoToNext ",
+      "MoveNext ",
+      "Next "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 97,
+    "question": "Wyrażenie po prawej stronie operatora ?? (C#) obliczane jest:",
+    "answers": [
+      "Tylko, gdy wartość wyrażenia po jego lewej stronie będzie opcją o wartości None",
+      "Zawsze ",
+      "Tylko gdy wartość wyrażenia po jego lewej stronie jest równa null",
+      "Tylko gdy wartość wyrażenia po jego lewej stronie jest równa 0"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 98,
+    "question": "Aby w C# zapisać bezparametrowe wyrażenie lambda: ",
+    "answers": [
+      "Musimy podać tylko jego ciało, bez parametrów i operatora => ",
+      "Nie musimy nic podawać po lewej stronie operatora => ",
+      "Umieszczamy puste nawiasy okrągłe po lewej stronie operatora => ",
+      "Umieszczamy puste nawiasy klamrowe po lewej stronie operatora => "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 99,
+    "question": "W funkcji iteratorowej C# zakończenie generowania kolejnych elementów zgłaszamy za pomocą instrukcji: ",
+    "answers": [
+      "Yield break",
+      "Yield return",
+      "Yield ",
+      "Return "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 100,
+    "question": " Dla rekordów C# operacja osoba with {Nazwisko = „Nowak”} spowoduje ",
+    "answers": [
+      "Utworzenie nowego rekordu, o takich samych właściwościach jak rekord osoba,\n ale mającą wartość tylko dla właściwości nazwisko   ",
+      "Nic, ponieważ rekordy nie wspierają operatora with ",
+      "Utworzenie nowego rekordu, o takich samych wartościach właściwości jak rekord \n osoba, ale o innym nazwisku   ",
+      "Zmodyfikowanie właściwości nazwisko w rekordzie osoba  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
   }
 ]
 

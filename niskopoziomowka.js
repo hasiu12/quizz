@@ -43,7 +43,7 @@ async function fetchData() {
             console.error('Error while fetching JSON data:', error);
         }
     }
-    if (variant === false) {
+    if (!variant) {
         shuffleArray(quizData);
     }
 
@@ -58,7 +58,7 @@ document.getElementById('startQuiz').addEventListener('click', function () {
     updateStatsDisplay();
     visualNewQuizz();
      // Pobierz dane z pliku JSON
-    if (!initialDataLoaded || variant === true) {
+    if (!initialDataLoaded || variant) {
         variant = false;
         isFirstQuiz = false;
         fetchData();
@@ -436,7 +436,7 @@ function showAllAnswers() {
 
         const questionElement = document.createElement('div');
 
-        if (variant === true) {
+        if (variant) {
             const explainButton = document.createElement('button');
             explainButton.textContent = 'Wyjaœnij';
             explainButton.addEventListener('click', () => {
@@ -569,22 +569,26 @@ function shuffleArray1(array) {
 
     if (!noneExists && !allExists) {
         for (let i = array.length - 2; i > 0; i--) {
-            const j = Math.floor(Math.random() * i);
+            const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
     } else {
-        const endIndex = array.length - (allExists && noneExists ? 3 : 2);
+        const endIndex = array.length - (allExists && noneExists ? 4 : 3);
         for (let i = endIndex; i > 0; i--) {
-            const j = Math.floor(Math.random() * i);
+            const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
 
         if (allExists) {
-            const allIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'wszystkie powyższe');
-            [array[noneExists ? 3 : 4], array[allIndex]] = [array[allIndex], array[noneExists ? 3 : 4]];
+            const allIndex = quizData[currentQuestion].answers.findIndex(answer =>
+                answer.toLowerCase() === 'wszystkie powyższe'
+            );
+            [array[array.length - 2], array[allIndex]] = [array[allIndex], array[array.length - 2]];
         }
         if (noneExists) {
-            const noneIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'żadne z powyższych');
+            const noneIndex = quizData[currentQuestion].answers.findIndex(answer =>
+                answer.toLowerCase() === 'żadne z powyższych'
+            );
             [array[array.length - 1], array[noneIndex]] = [array[noneIndex], array[array.length - 1]];
         }
     }
