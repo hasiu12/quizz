@@ -381,6 +381,8 @@ function resetAnswer() {
     }
     answerChecked = false; // Ustaw, ¿e odpowiedŸ nie zosta³a sprawdzona
 }
+let spaceKeyEnabled = true; // Flaga informująca, czy klawisz spacji jest dostępny
+const spaceKeyDelay = 5000; // Opóźnienie w milisekundach (0.5 sekundy)
 
 function handleNumericKeyPress(event, answersCopy) {
     const key = event.key;
@@ -392,8 +394,11 @@ function handleNumericKeyPress(event, answersCopy) {
         if (answerInput) {
             answerInput.checked = true;
         }
-    } else if (key === ' ') {
-        event.preventDefault(); // Zapobiegamy domyœlnemu dzia³aniu spacji (przewijanie strony)
+    } else if (key === ' ' && spaceKeyEnabled) {
+        event.preventDefault(); // Zapobiegamy domyślnemu działaniu spacji (przewijanie strony)
+
+        spaceKeyEnabled = false; // Wyłączamy klawisz spacji na określony czas
+
         if (currentQuestion === numberOfQuestions - 1) {
             if (answerChecked === false) {
                 document.getElementById('endQuiz').click();
@@ -402,6 +407,10 @@ function handleNumericKeyPress(event, answersCopy) {
             document.getElementById('submit').click();
         }
         updateButtonsVisibility();
+
+        setTimeout(() => {
+            spaceKeyEnabled = true; // Włączamy ponownie klawisz spacji po upływie opóźnienia
+        }, spaceKeyDelay);
     }
 }
 
@@ -545,7 +554,11 @@ async function displayQuestion() {
 
 
     // Obsługa zdarzeń klawisza "keydown"
-    document.addEventListener('keydown', (event) => handleNumericKeyPress(event, answersCopy));
+    document.addEventListener('keydown', (event) => {
+        setTimeout(() => {
+            handleNumericKeyPress(event, answersCopy);
+        }, spaceKeyEnabled ? 0 : spaceKeyDelay);
+    });
 
     questionElement.classList.add('question-text');
 

@@ -167,7 +167,12 @@ label {
     align-items: center;
     margin: 0 20px;
 }
-
+.quiz-col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+}
 h3 {
     font-size: 35px;
 }
@@ -250,4 +255,35 @@ img {
     outline: 2px solid transparent; /* Grubość i kolor obramowania przezroczystego */
     background-color: rgba(255, 255, 255, 0.3); /* Kolor tła ramki z przezroczystością 40% */
     padding: 10px; /* Odstęp wewnątrz kontenera */
+}
+
+.bloczek {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 30px;
+
+}
+
+.bloczek {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ukryty {
+    display: none;
 }

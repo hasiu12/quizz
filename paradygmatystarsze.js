@@ -43,7 +43,7 @@ async function fetchData() {
             console.error('Error while fetching JSON data:', error);
         }
     }
-    if (variant === false) {
+    if (!variant) {
         shuffleArray(quizData);
     }
 
@@ -59,7 +59,7 @@ document.getElementById('startQuiz').addEventListener('click', function () {
     updateStatsDisplay();
     visualNewQuizz();
     // Pobierz dane z pliku JSON
-    if (!initialDataLoaded || variant === true) {
+    if (isFirstQuiz || variant) {
         variant = false;
         isFirstQuiz = false;
         fetchData();
@@ -322,7 +322,7 @@ function resetAnswer() {
     }
     answerChecked = false; // Ustaw, ¿e odpowiedŸ nie zosta³a sprawdzona
 }
-
+let spaceKeyPressed = false;
 function handleNumericKeyPress(event, answersCopy) {
     const key = event.key;
     const numericKeys = ['1', '2', '3', '4', '5'];
@@ -334,15 +334,29 @@ function handleNumericKeyPress(event, answersCopy) {
             answerInput.checked = true;
         }
     } else if (key === ' ') {
-        event.preventDefault(); // Zapobiegamy domyœlnemu dzia³aniu spacji (przewijanie strony)
+        event.preventDefault(); // Zapobiegamy domyślnemu działaniu spacji (przewijanie strony)
+
+        // Jeśli wcześniej został już wcisnięty klawisz spacji, przerywamy działanie
+        if (spaceKeyPressed) {
+            return;
+        }
+
+        spaceKeyPressed = true;
+
         if (currentQuestion === numberOfQuestions - 1) {
             if (answerChecked === false) {
                 document.getElementById('endQuiz').click();
             }
-        } else {
-            document.getElementById('submit').click();
-        }
+        } else
+            if (answerChecked === false) {
+                document.getElementById('submit').click();
+            }
         updateButtonsVisibility();
+
+        // Resetowanie zmiennej spaceKeyPressed po 1 sekundzie
+        setTimeout(() => {
+            spaceKeyPressed = false;
+        }, 300);
     }
 }
 

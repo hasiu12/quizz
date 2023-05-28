@@ -5,51 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona główna</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="manifest" href="/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="speech-bubble.png" type="image/x-icon">
 
 
 </head>
 <body>
     
-        <div class="container">
-            <div class="content-wrapper">
-                <div class="container1">
-    <h1 class="quiz-heading">Quiz</h1>
-    <p style="font-size: 20px;">Witaj na stronie głównej!</p>
-    <p style="font-size: 20px;">Tutaj możesz znaleźć odnośnik do quizu:</p>
-    <h3>Niskopoziomówka</h3>
-    <a class="quiz-link" href="niskopoziomowka.html">Przejdź do quizu</a>
-    <div>
-        <h3>Paradygmaty</h3>
-        <div class="quiz-row">
-            <div class="quiz-col">
-                <p style="font-size: 23px;"> Pozostałe Rzeczy</p>
-                <h7 style="font-size: 16px;">[niewykluczone ze przestarzałe]</h7>
-                <a class="quiz-link" href="paradygmatystarsze.html">Przejdź do quizu</a>
-            </div>
-            <div class="quiz-col">
-                <p style="font-size: 23px;">F# </p>
-                <h7 style="font-size: 16p   x;">dużo F# :)</h7>
-                <a class="quiz-link" href="paradygmaty.html">Przejdź do quizu</a>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="container1">
+                <h1 class="quiz-heading">Quiz</h1>
+                <p style="font-size: 20px;">Witaj na stronie głównej!</p>
+                <p style="font-size: 20px;">Tutaj możesz znaleźć odnośnik do quizu:</p>
+                <h3>Niskopoziomówka</h3>
+                <a class="quiz-link" href="niskopoziomowka.html">Przejdź do quizu</a>
+                <div class="container2">
+                    <div class="bloczek" onclick="pokazLinki(this)">
+                        <p style="font-size: 20px;"> Przydatne linki</p>
+                        
+                        <div id="linki" class="ukryty">
+                            <a href="https://cdn.discordapp.com/attachments/1076174193420410890/1097958465680445540/niskopoziom_merged.pdf">Wykład AiO</a><br>
+                            <a href="https://cdn.discordapp.com/attachments/1076174193420410890/1106218093753151488/x86_2_0.pdf">PDF od Michała</a><br>
+                            <a href="https://cdn.discordapp.com/attachments/1076174193420410890/1106218093379862628/x86_2_0.ods">Tableki od Michała :)</a><br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Paradygmaty</h3>
+                    <div class="quiz-row">
+                        <div class="quiz-col1">
+                            <p style="font-size: 23px;"> Pozostałe Rzeczy</p>
+                            <h7 style="font-size: 16px;">[niewykluczone ze przestarzałe]</h7>
+                            <a class="quiz-link" href="paradygmatystarsze.html">Przejdź do quizu</a>
+                            <div class="container2">
+                                <div class="bloczek" onclick="pokazLinki(this)">
+                                    <p style="font-size: 20px;"> Przydatne linki</p>
+
+                                    <div id="linki" class="ukryty">
+                                        <a href="https://stackoverflow.com/">Skarbnica wiedzy :P</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-col1">
+                            <p style="font-size: 23px;">F# </p>
+                            <h7 style="font-size: 16px;">dużo F# :)</h7>
+                            <a class="quiz-link" href="paradygmaty.html">Przejdź do quizu</a>
+                            <div class="container2">
+                                <div class="bloczek" onclick="pokazLinki(this)">
+                                    <p style="font-size: 20px;"> Przydatne linki</p>
+
+                                    <div id="linki" class="ukryty">
+                                        <a href="https://cdn.discordapp.com/attachments/1076174134452682822/1109513665385865306/pp2023.pdf">Wykład AiO</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-        </div>
+        <script src="index.js"></script>
     </div>
 </body>
 </html>
