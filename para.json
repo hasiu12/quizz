@@ -1202,6 +1202,78 @@
     ],
     "explanation": "todo",
     "correctAnswer": 3
+  },
+  {
+    "id": 101,
+    "question": "Dana jest funkcja: \nVoid StworzSamochod(IFactory&lt;Car&gt;fabryka)\n{ Car car = fabryka.Create();}\nAby móc do niej przekazać obiekt klasy class Factory : IFactory&lt;Truck&gt; {}, gdzie klasa Truck dziedziczy po Car, interfejs IFactory musi być:",
+    "answers": [
+      "Kontrawariantny ",
+      "Kowariantny ",
+      "Inwariantny ",
+      "Abstrakcyjny "
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 5
+  },
+  {
+    "id": 102,
+    "question": "Funkcję, która ma być uruchomiona po zakończeniu zadania Z możemy przypisać do niego za pomocą metody ContinueWith",
+    "answers": [
+      "Tylko przed uruchomieniem zadania Z",
+      "Tylko po uruchomieniu zadania Z",
+      "W dowolnym momencie po utworzeniu zadania Z",
+      "Tylko po zakończeniu zadania Z "
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 5
+  },
+  {
+    "id": 103,
+    "question": "Kiedy operacja pośrednia LINQ np. Where jest uruchamiana: ",
+    "answers": [
+      "Kiedy wywoływana jest funkcja uruchamiająca przepływ danych np. Single",
+      "Kiedy jest dołączona do przepływu danych",
+      "Kiedy strumień danych jest zamykany metodą Close   ",
+      "W zestawie z innymi operacjami zależnie od ustawień kompilatora"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 0
+  },
+  {
+    "id": 104,
+    "question": "Języki domenowe wewnętrzne:",
+    "answers": [
+      "Nie istnieją",
+      "Wymagają specjalnych narzędzi do definiowania",
+      "Korzystają z mechanizmów języka w którym są definiowane",
+      "Nie mogą być implementowane w C#"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 2
+  },
+  {
+    "id": 105,
+    "question": "Metody rozszerzające możemy definiować:",
+    "answers": [
+      "Tylko dla typów wartościowych",
+      "Dla wszystkich typów ",
+      "Tylko dla typów referencyjnych",
+      "Tylko dla typów wbudowanych"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 1
+  },
+  {
+    "id": 106,
+    "question": "Którą z poniższych deklaracji poprawnie zdefiniuje operator konwersji zawsze wywoływany jawnie: ",
+    "answers": [
+      "Public static explicit operator int(Kwota k)\n { return 0; }",
+      "Public static explicit int(Kwota k)\n { return 0; }",
+      "Public static implicit operator int(Kwota k) \n { return 0; } ",
+      "Public explicit operator int(Kwota k)\n { return 0; }"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 5
   }
 ]
 

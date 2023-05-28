@@ -1,15 +1,15 @@
 ﻿[
   {
     "id": 1,
-    "question": "Dana jest funkcja: \nVoid StworzSamochod(IFactory&lt;Car&gt;fabryka)\n{ Car car = fabryka.Create();}\nAby móc do niej przekazać obiekt klasy class Factory : IFactory&lt;Truck&gt; {}, gdzie klasa Truck dziedziczy po Car, interfejs IFactory musi być:",
+    "question": "Funktorem nazywamy typ, który będzie wyposażony w funkcję",
     "answers": [
-      "Kontrawariantny ",
-      "Kowariantny ",
-      "Inwariantny ",
-      "Abstrakcyjny "
+      "Bind (M<T>, (T->M<R>)) -> M<R>",
+      "Return T->M<T>",
+      "Map (M<T>, (T->R)) -> M<R>",
+      "Konstruktorową"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 2,
@@ -21,19 +21,19 @@
       "Żadne z wymienionych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 3,
-    "question": "Funkcję, która ma być uruchomiona po zakończeniu zadania Z możemy przypisać do niego za pomocą metody ContinueWith",
+    "question": "W rekurencji ogonowej",
     "answers": [
-      "Tylko przed uruchomieniem zadania Z",
-      "Tylko po uruchomieniu zadania Z",
-      "W dowolnym momencie po utworzeniu zadania Z",
-      "Tylko po zakończeniu zadania Z "
+      "Wywołanie rekurencji może być utrudnione w dowolnym miejscu funkcji",
+      "Możemy operować tylko na liczbach całkowitych",
+      "Funkcje nie mogą mieć parametrów",
+      "Wywołanie rekurencyjne musi być ostatnim wywołaniem w funkcji"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
       "Żadne z wymienionych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 5,
@@ -57,43 +57,43 @@
       "let sumuj = function |[]->0|x::xs->x+sumuj xs"
     ],
     "explanation": "todo",
-    "correctAnswer": 1
+    "correctAnswer": 0
   },
   {
     "id": 6,
-    "question": "Kiedy operacja pośrednia LINQ np. Where jest uruchamiana: ",
+    "question": "Czym jest efekt uboczny w kontekście instrukcji programowania?",
     "answers": [
-      "Kiedy wywoływana jest funkcja uruchamiająca przepływ danych np. Single",
-      "Kiedy jest dołączona do przepływu danych",
-      "Kiedy strumień danych jest zamykany metodą Close   ",
-      "W zestawie z innymi operacjami zależnie od ustawień kompilatora"
+      "Działania wykonywane przez instrukcję, które nie są bezpośrednio związane z grupą instrukcji, do której należy.",
+      "Wynik działania instrukcji, który nie ma wpływu na stan innych instrukcji w programie.",
+      "Efekt, który powstaje w wyniku działania instrukcji, ale nie jest oczekiwany lub zamierzony.",
+      "Wykonanie czynności, która nie jest uwzględniona w strukturze instrukcji lub bloku kodu."
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 7,
-    "question": "Metody rozszerzające możemy definiować:",
+    "question": "Czym jest monoid w języku F#?",
     "answers": [
-      "Tylko dla typów wartościowych",
-      "Dla wszystkich typów ",
-      "Tylko dla typów referencyjnych",
-      "Tylko dla typów wbudowanych"
+      "Klasa w języku F#, która implementuje operacje matematyczne na liczbach.",
+      "Abstrakcyjny typ danych w F#, który reprezentuje strukturę danych przechowującą kolekcję elementów.",
+      "Wzorzec programowania w F#, który umożliwia kompozycję operacji na strukturach danych.",
+      "Koncept w F#, który opisuje strukturę algebraiczną z jednoznacznym elementem neutralnym i operacją łączną."
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 8,
-    "question": "Którą z poniższych deklaracji poprawnie zdefiniuje operator konwersji zawsze wywoływany jawnie: ",
+    "question": "Jaka jest różnica pomiędzy funkcjami List.scan a List.fold w języku F#?",
     "answers": [
-      "Public static explicit operator int(Kwota k)\n { return 0; }",
-      "Public static explicit int(Kwota k)\n { return 0; }",
-      "Public static implicit operator int(Kwota k) \n { return 0; } ",
-      "Public explicit operator int(Kwota k)\n { return 0; }"
+      "List.scan wykonuje operację na każdym elemencie listy, przechowując pośrednie wyniki, podczas gdy List.fold wykonuje operację na wszystkich elementach jednocześnie.",
+      "List.scan umożliwia modyfikację elementów listy, podczas gdy List.fold jest funkcją tylko do odczytu.",
+      "List.scan zwraca nową listę zawierającą pośrednie wyniki operacji na kolejnych elementach, podczas gdy List.fold zwraca pojedynczy wynik.",
+      "List.scan i List.fold różnią się tylko nazwą, ale wykonują identyczną operację na liście."
     ],
-    "explanation": "todo",
-    "correctAnswer": 5
+    "explanation": "nein xD",
+    "correctAnswer": 0
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
       "Proces aplikacji funkcji tylko dla części parametrów"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 65,
@@ -129,7 +129,7 @@
       "Tak "
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
       "żadne z powyższych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
       "Zwrócenie długości listy"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
       "Każde wyrażenie F# ma typ, okre[lony podczas kompilacji"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
       "monoidu"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 16,
@@ -225,7 +225,7 @@
       "Zawsze "
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 20,
@@ -237,7 +237,7 @@
       "Żadne z wymienionych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 21,
@@ -249,7 +249,7 @@
       "Modyfikcuje listę lista1 i usuwa lista2"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
       "żadne z powyższych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 23,
@@ -273,7 +273,7 @@
       "NonValue"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 0
   },
   {
     "id": 24,
@@ -285,7 +285,7 @@
       "1, ponieważ parametr y będzię miał domyślnie 0"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 25,
@@ -297,7 +297,7 @@
       "Ścisłego porównania"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 26,
@@ -309,7 +309,7 @@
       "let x=1::2::3::[]"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 27,
@@ -321,7 +321,7 @@
       "Wszystkie z powyższych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 28,
@@ -333,7 +333,7 @@
       "let f=function |[]->0|x::xs->1+f xs"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 0
   },
   {
     "id": 29,
@@ -345,7 +345,7 @@
       "int"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 0
   },
   {
     "id": 30,
@@ -357,7 +357,7 @@
       "występują w językach czysto funkcyjnych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 31,
@@ -369,11 +369,11 @@
       "żadne z powyższych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 32,
-    "question": "Ile argumentów należy przekazać do poniższej funckji, aby się wykonała:\n let f x=function Some y->x+y|None->",
+    "question": "Ile argumentów należy przekazać do poniższej funckji, aby się wykonała:\n let f x=function Some y->x+y|None-> x",
     "answers": [
       "0",
       "1",
@@ -381,7 +381,7 @@
       "Funckja jest błędna"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 33,
@@ -393,7 +393,7 @@
       "są inaczej nazywane funkcjami generyczynmi"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 34,
@@ -405,7 +405,7 @@
       "[<at_once>]let dodaj x y z=x+y+z"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 35,
@@ -417,7 +417,7 @@
       "Specjalna dyrektywa kompilatora"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 36,
@@ -429,7 +429,7 @@
       "zlacz:Option<`T>->(`T->Option<`R>->`R)"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 37,
@@ -441,7 +441,7 @@
       "let f=fun x y -> fun a -> a+x+y"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 38,
@@ -453,7 +453,7 @@
       "bez parametrowych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 39,
@@ -465,7 +465,7 @@
       "nie ma takich typów danych w F#"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 40,
@@ -477,7 +477,7 @@
       "może nie być elementów"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 41,
@@ -489,7 +489,7 @@
       "let recursive"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 42,
@@ -501,7 +501,7 @@
       "żadne z powyższych"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 43,
@@ -513,7 +513,7 @@
       "Typu Nullable"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 44,
@@ -525,7 +525,7 @@
       "ExceptionResult"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 2
   },
   {
     "id": 45,
@@ -537,7 +537,7 @@
       "Ścisłego porównania"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 46,
@@ -549,18 +549,18 @@
       "nie ma takich typów danych w F#"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 1
   },
   {
     "id": 47,
-    "question": "Języki domenowe wewnętrzne:",
+    "question": "W języku F#, do czego służy komenda match?",
     "answers": [
-      "Nie istnieją",
-      "Wymagają specjalnych narzędzi do definiowania",
-      "Korzystają z mechanizmów języka w którym są definiowane",
-      "Nie mogą być implementowane w C#"
+      "Wykonuje operacje arytmetyczne na dwóch wartościach.",
+      "Służy do porównywania dwóch wartości i zwracania wyniku jako wartość logiczną.",
+      "Umożliwia dopasowanie wartości do wzorców i wykonanie odpowiednich akcji w zależności od dopasowania.",
+      "Służy do wykonywania iteracji po elementach kolekcji i wykonania określonych działań dla każdego elementu."
     ],
-    "explanation": "todo",
+    "explanation": "nein xD",
     "correctAnswer": 2
   },
   {
@@ -572,7 +572,7 @@
       "Nie przyjmują parametrów",
       "Występują tylko w klasach statycznych"
     ],
-    "explanation": "todo",
+    "explanation": "1",
     "correctAnswer": 1
   },
   {
@@ -609,7 +609,7 @@
       "Funkcję jednego parametru"
     ],
     "explanation": "todo",
-    "correctAnswer": 5
+    "correctAnswer": 3
   },
   {
     "id": 51,
@@ -692,7 +692,7 @@
       "let x = if x<=1 then 1 else x + fun (x-1);;",
       "let fun x = if x<=1 then 1 else x + fun (x-1);;"
     ],
-    "explanation": "todo",
+    "explanation": "??? żadne, albo w B) powinno być let rec fun x (dodać x), albo w D) powinno być let rec (dodać rec) fun x",
     "correctAnswer": 3
   },
   {

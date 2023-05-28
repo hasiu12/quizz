@@ -20,7 +20,7 @@ let isFirstQuiz = true;
 // Funkcja pobieraj¹ca dane z pliku JSON
 async function fetchData() {
     
-    if (!initialDataLoaded || variant) {
+    if (!initialDataLoaded ) {
         console.log('Fetching quiz data...');
         try {
             // Pobierz dane z JSONbin.io
@@ -44,7 +44,7 @@ async function fetchData() {
             console.error('Error while fetching JSON data:', error);
         }
     }
-    if (variant === false) {
+    if (!variant) {
         shuffleArray(quizData);
     }
 
@@ -59,8 +59,9 @@ document.getElementById('startQuiz').addEventListener('click', function () {
     updateStats(false, false);
     updateStatsDisplay();
     visualNewQuizz();
+    
     // Pobierz dane z pliku JSON
-    if (!isFirstQuiz) {
+    if (isFirstQuiz||variant) {
         variant = false;
         isFirstQuiz = false;
         fetchData();
@@ -175,6 +176,8 @@ function visualMenu() {
 }
 
 function kblisko() {
+    lukaszek.style.display = "none";
+    lukaszek1.style.display = "none";
     results.style.display = "none";
     document.getElementById('quiz-stats').style.display = 'none';
 
@@ -190,6 +193,48 @@ function visualResetQuizz() {
 }
 
 function visualEndQuiz(isPassed) {
+
+    const lukaszek = document.getElementById('lukaszek');
+    const lukaszek1 = document.getElementById('lukaszek1');
+    //const kox = document.getElementById('kox');
+   // const bilskopajak = document.getElementById('bilskopajak');
+
+    lukaszek.style.display = 'none';
+    lukaszek1.style.display = 'none';
+   // kox.style.display = 'none';
+  //  bilskopajak.style.display = 'none';
+
+    let displayCase;
+
+    if (isPassed) {
+    //    displayCase = 'kox';
+    } else if (correctAnswers < 3 && !negativ) {
+        displayCase = 'lukaszek1';
+    } else if (negativ) {
+       // displayCase = 'bilskopajak';
+    } else {
+        displayCase = 'lukaszek';
+    }
+
+    switch (displayCase) {
+        case 'kox':
+            kox.style.display = 'block';
+            kox.style.margin = 'auto';
+            break;
+        case 'lukaszek1':
+            lukaszek1.style.display = 'block';
+            lukaszek1.style.margin = 'auto';
+            break;
+        case 'bilskopajak':
+            bilskopajak.style.display = 'block';
+            bilskopajak.style.margin = 'auto';
+            break;
+        case 'lukaszek':
+        default:
+            lukaszek.style.display = 'block';
+            lukaszek.style.margin = 'auto';
+            break;
+    }
     const quizStats = document.getElementById('quiz-stats');
     quizStats.style.display = 'block';
 
@@ -310,6 +355,7 @@ function resetAnswer() {
     answerChecked = false; // Ustaw, ¿e odpowiedŸ nie zosta³a sprawdzona
 }
 
+let spaceKeyPressed = false;
 function handleNumericKeyPress(event, answersCopy) {
     const key = event.key;
     const numericKeys = ['1', '2', '3', '4', '5'];
@@ -321,15 +367,29 @@ function handleNumericKeyPress(event, answersCopy) {
             answerInput.checked = true;
         }
     } else if (key === ' ') {
-        event.preventDefault(); // Zapobiegamy domyœlnemu dzia³aniu spacji (przewijanie strony)
+        event.preventDefault(); // Zapobiegamy domyślnemu działaniu spacji (przewijanie strony)
+
+        // Jeśli wcześniej został już wcisnięty klawisz spacji, przerywamy działanie
+        if (spaceKeyPressed) {
+            return;
+        }
+
+        spaceKeyPressed = true;
+
         if (currentQuestion === numberOfQuestions - 1) {
             if (answerChecked === false) {
                 document.getElementById('endQuiz').click();
             }
-        } else {
+        } else
+            if (answerChecked === false) {
             document.getElementById('submit').click();
         }
         updateButtonsVisibility();
+
+        // Resetowanie zmiennej spaceKeyPressed po 1 sekundzie
+        setTimeout(() => {
+            spaceKeyPressed = false;
+        }, 300);
     }
 }
 
@@ -344,7 +404,7 @@ function checkIfNoneExists(answers) {
 
 function checkIfAllExists(answers) {
     for (const answer of answers) {
-        if (answer.toLowerCase() === 'wszystkie powyższe' || answer.toLowerCase() === 'wszystkie z powyższych') {
+        if (answer.toLowerCase() === 'wszystkie z powyższych') {
             return true;
         }
     }
@@ -419,8 +479,10 @@ function restartQuiz() {
     currentQuestion = 0; // Zresetuj indeks pytania
     correctAnswers = 0; // Zresetuj liczbê poprawnych odpowiedzi
     wrongAnswers = 0; // Zresetuj liczbê b³êdnych odpowiedzi
-
-    fetchData(); // Pobierz dane z pliku JSON
+   
+        fetchData(); // Pobierz dane z pliku JSON
+    
+    
 }
 
 // Funkcja sprawdzająca odpowiedź i zliczająca wyniki
@@ -502,7 +564,7 @@ function shuffleArray(array) {
 
 function shuffleArray1(array) {
     const noneExists = checkIfNoneExists(quizData[currentQuestion].answers);
-    const allExists = checkIfAllExists(quizData[currentQuestion].answers);
+    const allExists = false;// checkIfAllExists(quizData[currentQuestion].answers);
 
     if (!noneExists && !allExists) {
         for (let i = array.length - 2; i > 0; i--) {
@@ -517,7 +579,8 @@ function shuffleArray1(array) {
         }
 
         if (allExists) {
-            const allIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'wszystkie z powyższych' || answer.toLowerCase() === 'wszystkie z wymienionych');
+            const allIndex = quizData[currentQuestion].answers.findIndex(answer => answer.toLowerCase() === 'wszystkie z powyższych');
+
             [array[noneExists ? 3 : 4], array[allIndex]] = [array[allIndex], array[noneExists ? 3 : 4]];
         }
         if (noneExists) {
@@ -576,13 +639,17 @@ function podzielPytaniaNaQuizy(pytania, liczbaQuizow, pytaniaNaQuiz) {
     return podzielonePytania;
 }
 
+
+
 function generateQuizzes(allQuestions) {
     const numberOfQuizzes = 6;
-    const questionsPerQuiz = numberOfQuestions;
+    const questionsPerQuiz = Math.floor(allQuestions.length / numberOfQuizzes); // Liczba pytań na quiz
+
+    quizzes = []; // Wyczyszczenie poprzednich quizów
 
     for (let i = 0; i < numberOfQuizzes; i++) {
         const startIndex = i * questionsPerQuiz;
-        const endIndex = startIndex + questionsPerQuiz;
+        const endIndex = i === numberOfQuizzes - 1 ? allQuestions.length : startIndex + questionsPerQuiz;
         const quizQuestions = allQuestions.slice(startIndex, endIndex);
         quizzes.push(quizQuestions);
     }
@@ -597,12 +664,15 @@ function startSelectedQuiz(quizIndex) {
         correctAnswers = [];
         odpowiedzi = [];
         quizData = quizzes[quizIndex];
-        visualNewQuizz()
-        displayQuestion();
-        variant = true;
-        if (isFirstQuiz) {
-            isFirstQuiz = false;
-        }
+        visualNewQuizz();
+
+        setTimeout(function() {
+            displayQuestion();
+            variant = true;
+            if (isFirstQuiz) {
+                isFirstQuiz = false;
+            }
+        }, 100); // Opóźnienie 100ms przed wyświetleniem pytania
     }
 }
 
