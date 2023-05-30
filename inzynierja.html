@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="speech-bubble.png" type="image/x-icon">
+</head>
+
+<body>
+    <a href="index.html">
+        <img src="domek.png" alt="Tu podaj tekst alternatywny" style="border: 0;width: 100px;height: 100px;">
+    </a>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="container1">
+                <h1 class="quiz-heading">Quiz</h1>
+
+                <h2 id="instructions1">Mozliwosc sterowania klawiszami 1-5</h2>
+                <h2 id="instructions2">oraz zmiana pytania spacją</h2>
+
+                <h3 id="instructions3">Quizz ze wszystkich pytań</h3>
+
+                <button id="startQuiz">Rozpocznij quiz</button>
+
+                <div id="quizContent" style="display: none;">
+                    <div id="question"></div>
+                    <ul id="answers"></ul>
+                    <button id="submit">Nastepne pytanie</button>
+                    <div id="result"></div>
+                    <button id="endQuiz" style="display: none;">Zakoncz quiz</button>
+                </div>
+
+                <div id="allAnswers" style="display: none;"></div>
+
+                <div id="results" style="display: none;">
+                    <h2>Wyniki</h2>
+                    <div id="score"></div>
+                    <button id="showResults" style="display: none;">Pokaż wyniki</button>
+                </div>
+
+                <button id="newQuiz" style="display: none;">Nowy quiz</button>
+                <button id="menu" style="display: none;">Menu główne</button>
+
+                <div id="quizSelection" class="quiz-selection">
+                    <h3>Wybierz quiz:</h3>
+                    <div class="quiz-row">
+                        <div class="quiz-col">
+                            <h2>Pytania 1-10:</h2>
+                            <button class="quiz-btn" data-quiz-index="0">Quiz 1</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 11-20:</h2>
+                            <button class="quiz-btn" data-quiz-index="1">Quiz 2</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 21-30:</h2>
+                            <button class="quiz-btn" data-quiz-index="2">Quiz 3</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-row">
+                        <div class="quiz-col">
+                            <h2>Pytania 31-40:</h2>
+                            <button class="quiz-btn" data-quiz-index="3">Quiz 4</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 41-50:</h2>
+                            <button class="quiz-btn" data-quiz-index="4">Quiz 5</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 51-60:</h2>
+                            <button class="quiz-btn" data-quiz-index="5">Quiz 6</button>
+                        </div>
+                    </div>
+                    <div class="quiz-row">
+                        <div class="quiz-col">
+                            <h2>Pytania 61-70:</h2>
+                            <button class="quiz-btn" data-quiz-index="6">Quiz 7</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 71-80:</h2>
+                            <button class="quiz-btn" data-quiz-index="7">Quiz 8</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 81-90:</h2>
+                            <button class="quiz-btn" data-quiz-index="8">Quiz 9</button>
+                        </div>
+                    </div>
+                    <div class="quiz-row">
+                        <div class="quiz-col">
+                            <h2>Pytania 91-100:</h2>
+                            <button class="quiz-btn" data-quiz-index="9">Quiz 10</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 101-110:</h2>
+                            <button class="quiz-btn" data-quiz-index="10">Quiz 11</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 111-120:</h2>
+                            <button class="quiz-btn" data-quiz-index="11">Quiz 12</button>
+                        </div>
+                    </div>
+                    <div class="quiz-row">
+                        <div class="quiz-col">
+                            <h2>Pytania 121-130:</h2>
+                            <button class="quiz-btn" data-quiz-index="12">Quiz 13</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 131-140:</h2>
+                            <button class="quiz-btn" data-quiz-index="13">Quiz 14</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 141-150:</h2>
+                            <button class="quiz-btn" data-quiz-index="14">Quiz 15</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="quiz-container" class="quiz-container" style="display: none;"></div>
+                <div id="meme">
+                    <img id="bilsko" src="janusz.png" alt="Opis zdjęcia" style="display: none;">
+                    <img id="poteznybilsko" src="poteznybilsko.jpg" alt="Opis zdjęcia" style="display: none;">
+                    <img id="kox" src="koxx.png" alt="Opis zdjęcia" style="display: none;">
+                    <img id="bilskopajak" src="bilskopajak.png" alt="Opis zdjęcia" style="display: none;">
+                </div>
+                <div id="quiz-stats" style="display: none;">
+                    <p>Quizów rozpoczętych: <span id="attempts">0</span></p>
+                    <p>Quizów ukończonych: <span id="completed">0</span></p>
+                    <p>Quizów zdanych: <span id="passed">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="inzynierja.js"></script>
+    <script src="devmode.js"></script>
+</body>
+</html>
