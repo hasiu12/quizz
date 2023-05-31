@@ -1,24 +1,11 @@
 ﻿/* Ogólne style strony */
 body {
-  font-family: DejaVu Sans;
-  animation: animatedBackground 50s linear infinite;
+    font-family: DejaVu Sans;
+    animation: animatedBackground 50s linear infinite;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
-    /* Dodanie kilku nowych klas dla różnych tła */
-    body.background1 {
-        background-image: url('to.gif');
-        animation: none;
-    }
-
-    body.background2 {
-        background-image: url('to1.gif');
-        animation: none;
-    }
-
-    body.background3 {
-        background-image: url('abstract-taiga.gif');
-        animation: none;
-    }
 
 @keyframes animatedBackground {
     0% {
@@ -291,6 +278,7 @@ img {
     border: 1px solid #ccc;
     padding: 10px;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Style dla kontenera 2 */
@@ -300,6 +288,7 @@ img {
     align-items: center;
     height: 100px;
     margin-top: 30px;
+
 }
 
 /* Ukrywanie elementu */
