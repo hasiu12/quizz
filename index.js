@@ -1,4 +1,4 @@
-// Twoja wczeœniejsza funkcja
+// Twoja wczeÅ“niejsza funkcja
 function pokazLinki(element) {
     var linki = element.getElementsByClassName("ukryty")[0];
     if (linki.style.display === "none") {
@@ -36,7 +36,7 @@ function applyCustomBackground() {
     }
 }
 
-// Funkcja do wczytywania t³a przy ³adowaniu strony
+// Funkcja do wczytywania tÂ³a przy Â³adowaniu strony
 window.onload = function () {
     var background = localStorage.getItem('background');
     var animationState = localStorage.getItem('animationState');
@@ -73,17 +73,13 @@ window.onload = function () {
     }
 }
 
-// Dodaj zdarzenie scroll
-window.addEventListener('scroll', function () {
-    document.body.style.backgroundPosition = 'center ' + (-window.scrollY) + 'px';
-});
 
-// Funkcja do zmiany przezroczystoœci
+// Funkcja do zmiany przezroczystoÅ“ci
 function changeTransparency() {
     var transparency = document.getElementById('transparencyRange').value;
     document.querySelector('.container1').style.backgroundColor = 'rgba(255, 255, 255, ' + transparency + ')';
     localStorage.setItem('transparency', transparency);
 }
 
-// Dodaj obs³ugê zdarzenia change
+// Dodaj obsÂ³ugÃª zdarzenia change
 document.getElementById('transparencyRange').addEventListener('change', changeTransparency);
