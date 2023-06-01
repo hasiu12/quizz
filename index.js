@@ -1,4 +1,4 @@
-// Twoja wczeœniejsza funkcja
+// Twoja wcześniejsza funkcja
 function pokazLinki(element) {
     var linki = element.getElementsByClassName("ukryty")[0];
     if (linki.style.display === "none") {
@@ -16,46 +16,45 @@ function applyCustomBackground() {
     var url = document.getElementById('backgroundUrl').value;
     if (url) {
         document.body.style.backgroundImage = `url('${url}')`;
+        document.body.style.backgroundAttachment = 'fixed';
         document.body.style.backgroundPosition = 'center top';
         document.body.style.backgroundRepeat = 'no-repeat';
         document.body.style.backgroundSize = 'cover';
-        document.body.style.height = "100%";
         document.body.style.animation = 'none';
-        document.querySelector('.container1').style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
         localStorage.setItem('background', url);
         localStorage.setItem('animationState', 'off');
     } else {
         document.body.style.backgroundImage = 'none';
-        document.body.style.backgroundPosition = '';
-        document.body.style.backgroundRepeat = '';
-        document.body.style.backgroundSize = '';
+        document.body.style.backgroundAttachment = 'scroll';
+        document.body.style.backgroundPosition = 'initial';
+        document.body.style.backgroundRepeat = 'repeat';
+        document.body.style.backgroundSize = 'auto';
         document.body.style.animation = 'animatedBackground 40s linear infinite';
-        document.querySelector('.container1').style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
         localStorage.removeItem('background');
         localStorage.setItem('animationState', 'on');
     }
 }
 
-// Funkcja do wczytywania t³a przy ³adowaniu strony
+// Funkcja do wczytywania tła przy ładowaniu strony
 window.onload = function () {
     var background = localStorage.getItem('background');
     var animationState = localStorage.getItem('animationState');
 
     if (background) {
         document.body.style.backgroundImage = `url('${background}')`;
+        document.body.style.backgroundAttachment = 'fixed';
         document.body.style.backgroundPosition = 'center top';
         document.body.style.backgroundRepeat = 'no-repeat';
         document.body.style.backgroundSize = 'cover';
         document.body.style.animation = 'none';
-        document.querySelector('.container1').style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
         isAnimated = false;
     } else {
         document.body.style.backgroundImage = 'none';
-        document.body.style.backgroundPosition = '';
-        document.body.style.backgroundRepeat = '';
-        document.body.style.backgroundSize = '';
+        document.body.style.backgroundAttachment = 'scroll';
+        document.body.style.backgroundPosition = 'initial';
+        document.body.style.backgroundRepeat = 'repeat';
+        document.body.style.backgroundSize = 'auto';
         document.body.style.animation = 'animatedBackground 40s linear infinite';
-        document.querySelector('.container1').style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
         isAnimated = true;
     }
 
@@ -73,13 +72,15 @@ window.onload = function () {
     }
 }
 
+// Dodaj zdarzenie scroll
 
-// Funkcja do zmiany przezroczystoœci
+
+// Funkcja do zmiany przezroczystości
 function changeTransparency() {
     var transparency = document.getElementById('transparencyRange').value;
     document.querySelector('.container1').style.backgroundColor = 'rgba(255, 255, 255, ' + transparency + ')';
     localStorage.setItem('transparency', transparency);
 }
 
-// Dodaj obs³ugê zdarzenia change
+// Dodaj obsługę zdarzenia change
 document.getElementById('transparencyRange').addEventListener('change', changeTransparency);
