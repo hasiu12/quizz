@@ -174,8 +174,10 @@ function visualMenu() {
 }
 
 function kblisko() {
-  //  lukaszek.style.display = "none";
-  //  lukaszek1.style.display = "none";
+    bilsko.style.display = "none";
+    kox.style.display = "none";
+    poteznybilsko.style.display = "none";
+    bilskopajak.style.display = "none";
     results.style.display = "none";
     document.getElementById('quiz-stats').style.display = 'none';
 
@@ -188,52 +190,50 @@ function visualResetQuizz() {
     document.getElementById('allAnswers').style.display = 'none'; // Ukryj wszystkie odpowiedzi
     document.getElementById('menu').style.display = 'none';
     kblisko();
-}
-
-function visualEndQuiz(isPassed) {
-
-   //// const lukaszek = document.getElementById('lukaszek');
-   // //const lukaszek1 = document.getElementById('lukaszek1');
-   // //const kox = document.getElementById('kox');
-   // // const bilskopajak = document.getElementById('bilskopajak');
-
-   // lukaszek.style.display = 'none';
-   // lukaszek1.style.display = 'none';
-   // // kox.style.display = 'none';
-   // //  bilskopajak.style.display = 'none';
-
-   // let displayCase;
-
-   // if (isPassed) {
-   //     //    displayCase = 'kox';
-   // } else if (correctAnswers < 3 && !negativ) {
-   //     displayCase = 'lukaszek1';
-   // } else if (negativ) {
-   //     // displayCase = 'bilskopajak';
-   // } else {
-   //     displayCase = 'lukaszek';
-   // }
-
-   // switch (displayCase) {
-   //     case 'kox':
-   //         kox.style.display = 'block';
-   //         kox.style.margin = 'auto';
-   //         break;
-   //     case 'lukaszek1':
-   //         lukaszek1.style.display = 'block';
-   //         lukaszek1.style.margin = 'auto';
-   //         break;
-   //     case 'bilskopajak':
-   //         bilskopajak.style.display = 'block';
-   //         bilskopajak.style.margin = 'auto';
-   //         break;
-   //     case 'lukaszek':
-   //     default:
-   //         lukaszek.style.display = 'block';
-   //         lukaszek.style.margin = 'auto';
-   //         break;
-   // }
+}function visualEndQuiz(isPassed) {
     const quizStats = document.getElementById('quiz-stats');
+    const bilsko = document.getElementById('bilsko');
+    const poteznybilsko = document.getElementById('poteznybilsko');
+    const kox = document.getElementById('kox');
+    const bilskopajak = document.getElementById('bilskopajak');
+
+    bilsko.style.display = 'none';
+    poteznybilsko.style.display = 'none';
+    kox.style.display = 'none';
+    bilskopajak.style.display = 'none';
+
+    let displayCase;
+
+    if (isPassed) {
+        displayCase = 'kox';
+    } else if (correctAnswers < 1 && !negativ) {
+        displayCase = 'poteznybilsko';
+    } else if (negativ) {
+        displayCase = 'bilskopajak';
+    } else {
+        displayCase = 'bilsko';
+    }
+
+    switch (displayCase) {
+        case 'kox':
+            kox.style.display = 'block';
+            kox.style.margin = 'auto';
+            break;
+        case 'poteznybilsko':
+            poteznybilsko.style.display = 'block';
+            poteznybilsko.style.margin = 'auto';
+            break;
+        case 'bilskopajak':
+            bilskopajak.style.display = 'block';
+            bilskopajak.style.margin = 'auto';
+            break;
+        case 'bilsko':
+        default:
+            bilsko.style.display = 'block';
+            bilsko.style.margin = 'auto';
+            break;
+    }
+
     quizStats.style.display = 'block';
 
     document.getElementById('quizContent').style.display = 'none'; // Ukryj zawartość quizu
@@ -249,6 +249,7 @@ function visualEndQuiz(isPassed) {
 
     document.getElementById('newQuiz').style.display = 'block'; // Wyświetl przycisk "Nowy quiz"
 }
+
 
 function updateButtonsVisibility() {
     if (currentQuestion === numberOfQuestions - 1) {
