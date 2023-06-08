@@ -384,6 +384,7 @@ function resetAnswer() {
 let spaceKeyEnabled = true; // Flaga informująca, czy klawisz spacji jest dostępny
 const spaceKeyDelay = 5000; // Opóźnienie w milisekundach (0.5 sekundy)
 
+let spaceKeyPressed = false;
 function handleNumericKeyPress(event, answersCopy) {
     const key = event.key;
     const numericKeys = ['1', '2', '3', '4', '5'];
@@ -394,25 +395,33 @@ function handleNumericKeyPress(event, answersCopy) {
         if (answerInput) {
             answerInput.checked = true;
         }
-    } else if (key === ' ' && spaceKeyEnabled) {
+    } else if (key === ' ') {
         event.preventDefault(); // Zapobiegamy domyślnemu działaniu spacji (przewijanie strony)
 
-        spaceKeyEnabled = false; // Wyłączamy klawisz spacji na określony czas
+        // Jeśli wcześniej został już wcisnięty klawisz spacji, przerywamy działanie
+        if (spaceKeyPressed) {
+            return;
+        }
+
+        spaceKeyPressed = true;
 
         if (currentQuestion === numberOfQuestions - 1) {
             if (answerChecked === false) {
                 document.getElementById('endQuiz').click();
             }
-        } else {
-            document.getElementById('submit').click();
-        }
+        } else
+            if (answerChecked === false) {
+                document.getElementById('submit').click();
+            }
         updateButtonsVisibility();
 
+        // Resetowanie zmiennej spaceKeyPressed po 1 sekundzie
         setTimeout(() => {
-            spaceKeyEnabled = true; // Włączamy ponownie klawisz spacji po upływie opóźnienia
-        }, spaceKeyDelay);
+            spaceKeyPressed = false;
+        }, 300);
     }
 }
+
 
 function checkIfNoneExists(answers) {
     for (const answer of answers) {
