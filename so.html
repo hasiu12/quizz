@@ -25,7 +25,9 @@
                 <h3 id="instructions3">Quizz ze wszystkich pytań</h3>
 
 
-                <button id="startQuiz">Rozpocznij quiz</button>
+
+                <button id="startQuizUpper">Start Quiz</button>
+
 
                 <div id="quizContent" style="display: none;">
                     <div id="question"></div>
@@ -49,81 +51,87 @@
 
                 <div id="quizSelection" class="quiz-selection">
                     <h3>Wybierz quiz:</h3>
+
                     <div class="quiz-row">
                         <div class="quiz-col">
-
-                            <div class="poprawa">
-                                <h2>Test z 2003</h2>
-                                <button id="2003">Rozpocznij quiz</button>
-                            </div>
+                            <h2>Pytania 1-20:</h2>
+                            <button class="quiz-btn" data-quiz-index="6">Quiz 1</button>
                         </div>
                         <div class="quiz-col">
-                            <div class="poprawa">
-                                <h2>Test z 2005</h2>
-                                <button id="2005">Rozpocznij quiz</button>
-                            </div>
+                            <h2>Pytania 21-41:</h2>
+                            <button class="quiz-btn" data-quiz-index="7">Quiz 2</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 42-62:</h2>
+                            <button class="quiz-btn" data-quiz-index="8">Quiz 3</button>
                         </div>
                     </div>
                     <div class="quiz-row">
                         <div class="quiz-col">
-                            <div class="poprawa">
-                                <h2>Test z 2006</h2>
-                                <button id="2006a">Rozpocznij quiz</button>
-                            </div>
+                            <h2>Pytania 63-83:</h2>
+                            <button class="quiz-btn" data-quiz-index="9">Quiz 4</button>
                         </div>
                         <div class="quiz-col">
-                            <div class="poprawa">
-                                <h2>Test z 2006</h2>
-                                <button id="2006b">Rozpocznij quiz</button>
-
-                            </div>
+                            <h2>Pytania 84-104:</h2>
+                            <button class="quiz-btn" data-quiz-index="10">Quiz 5</button>
                         </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 105-125:</h2>
+                            <button class="quiz-btn" data-quiz-index="11">Quiz 6</button>
+                        </div>
+                    </div>
 
+                    <h3>Pytania przerabiane</h3>
+                    <h2 style="font-size: 20px;">PIERWOTNIE BYŁY TO PYTANIA WIELKOROTNEGO WYBORU </h2>
+                    <h2 style="font-size: 20px;">PRZEROBIŁEM CZATEMGPT NA JEDNOKROTNEGO :P</h2>
+                    <button id="startQuizLower">Start Quiz</button>
+                    <h3>Wybierz quiz:</h3>
+                    <div class="quiz-row">
+                        <div class="quiz-col">
+                            <h2>Pytania 1-21:</h2>
+                            <button class="quiz-btn" data-quiz-index="0">Quiz 1</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 22-42:</h2>
+                            <button class="quiz-btn" data-quiz-index="1">Quiz 2</button>
+                        </div>
+                        <div class="quiz-col">
+                            <h2>Pytania 43-63:</h2>
+                            <button class="quiz-btn" data-quiz-index="2">Quiz 3</button>
+                        </div>
                     </div>
                     <div class="quiz-row">
                         <div class="quiz-col">
-                            <div class="poprawa">
-                                <h2>Test z 2007</h2>
-                                <button id="2007">Rozpocznij quiz</button>
-                            </div>
+                            <h2>Pytania 64-84:</h2>
+                            <button class="quiz-btn" data-quiz-index="3">Quiz 4</button>
                         </div>
                         <div class="quiz-col">
-                            <h2>Pytania 106-120:</h2>
-                            <button class="quiz-btn" data-quiz-index="7">Quiz 8</button>
+                            <h2>Pytania 85-105:</h2>
+                            <button class="quiz-btn" data-quiz-index="4">Quiz 5</button>
                         </div>
                         <div class="quiz-col">
-                            <h2>Pytania 121-135:</h2>
-                            <button class="quiz-btn" data-quiz-index="8">Quiz 9</button>
+                            <h2>Pytania 106-126:</h2>
+                            <button class="quiz-btn" data-quiz-index="5">Quiz 6</button>
                         </div>
+                    </div>
+
+                    <div id="quiz-container" class="quiz-container" style="display: none;"></div>
+                    <div id="meme">
+                        <img id="bilsko" img src="janusz.png" alt="Opis zdjęcia" style="display: none;">
+                        <img id="poteznybilsko" img src="poteznybilsko.jpg" alt="Opis zdjęcia" style="display: none;">
+                        <img id="kox" img src="koxx.png" alt="Opis zdjęcia" style="display: none;">
+                        <img id="bilskopajak" img src="bilskopajak.png" alt="Opis zdjęcia" style="display: none;">
+                    </div>
+                    <div id="quiz-stats" style="display: none;">
+                        <p>Quizów rozpoczętych: <span id="attempts">0</span></p>
+                        <p>Quizów ukończonych: <span id="completed">0</span></p>
+                        <p>Quizów zdanych: <span id="passed">0</span></p>
                     </div>
                 </div>
 
-                <div class="poprawa">
-                    <h2>Test z 2007</h2>
-                    <button id="2017">Rozpocznij quiz</button>
-                </div>
-                <div class="poprawa">
-                    <h2>Test z 2007</h2>
-                    <button id="2022">Rozpocznij quiz</button>
-                </div>
-
-                <div id="quiz-container" class="quiz-container" style="display: none;"></div>
-                <div id="meme">
-                    <img id="bilsko" img src="janusz.png" alt="Opis zdjęcia" style="display: none;">
-                    <img id="poteznybilsko" img src="poteznybilsko.jpg" alt="Opis zdjęcia" style="display: none;">
-                    <img id="kox" img src="koxx.png" alt="Opis zdjęcia" style="display: none;">
-                    <img id="bilskopajak" img src="bilskopajak.png" alt="Opis zdjęcia" style="display: none;">
-                </div>
-                <div id="quiz-stats" style="display: none;">
-                    <p>Quizów rozpoczętych: <span id="attempts">0</span></p>
-                    <p>Quizów ukończonych: <span id="completed">0</span></p>
-                    <p>Quizów zdanych: <span id="passed">0</span></p>
-                </div>
-            </div>
-
-        </div> <!-- Zamknięcie content-wrapper -->
-    </div> <!-- Zamknięcie container -->
-
+            </div> <!-- Zamknięcie content-wrapper -->
+        </div> <!-- Zamknięcie container -->
+    </div>
     <script src="so.js"></script>
     <script src="devmode.js"></script>
     <script src="index.js"></script>
