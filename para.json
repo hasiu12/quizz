@@ -1,0 +1,1279 @@
+﻿[
+  {
+    "id": 1,
+    "question": "W pętli\n for(<strong>char</strong> i=0;i&lt;256.i++)\n cout&lt;&lt;i&lt;&lt;endl;\n instukcja cout wykona sie",
+    "answers": [
+      "256 razy",
+      "257 razy",
+      "więcej niż 257 razy",
+      "255 razy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 2,
+    "question": "Funkcja<strong> rozszerzająca</strong>, jest to funkcja ",
+    "answers": [
+      "pozwalająca rozszerzyć możliwości już istniejącej metody",
+      "funkcja rozszerzająca kolekcję o nowe elementy",
+      "funkcja pozwalająca na dostęp do zmiennych prywatnych klasy",
+      "statyczna"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 3,
+    "question": "Wartości grupowane są w<strong>  n-tki</strong>  w: ",
+    "answers": [
+      "produktach kartezjańskich ",
+      "uniach",
+      "typach rekurencyjnych",
+      "mapowaniach"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 4,
+    "question": "Które z poniższych wyrażeń poprawnie definiuje w <strong>języku C#</strong> wyrażenie lambda,<strong> x.λ.y.(x y)</strong> ",
+    "answers": [
+      "(x,y) => y(x) ",
+      "(x,y) => (x y)",
+      "(x,y) => (y x)",
+      "(x,y) => x(y)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "question": "<strong>Blok programu</strong> jest to konstrukcja  ",
+    "answers": [
+      "Która może się łączyć tylko z instrukcją warunkową ",
+      "Która nie istnieje w nowoczesnych językach programowania ",
+      "Ograniczająca zakres widoczności deklaracji wewnątrz niego ",
+      "Równoważna definicji klasy "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "question": "Która, z poniższych instrukcji deklaruje <strong>zmienne sekwencyjnie</strong>  ",
+    "answers": [
+      "(let* ((x 2) (a 3)) (+x a))",
+      "(letrec ((x 2) (a 3)) (+ x a)) (letrec → rekurencyjny)",
+      "(let ((x 2) (a x)) (+ x a))",
+      "(let ((x 2) (a 3)) (+ x a))"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 7,
+    "question": "W językach <strong>o dynamicznym zakresie widoczności nazw</strong> ",
+    "answers": [
+      "Funkcja jest wywoływana w kontekście środowiska w którym została zdefiniowana",
+      "Funkcja jest wywoływana w kontekście środowiska w którym została wywołana",
+      "Funkcji nie ma",
+      "Funkcja jest wykonywana w dowolnym środowisku"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "<strong>Deklaracje </strong> są to instrukcje, które ",
+    "answers": [
+      "tworzą nowe funkcje",
+      "tworzą nowe zmienne",
+      "tworzą nowe stałe ",
+      "tworzą nowe wiązania"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 9,
+    "question": "Instrukcja <strong>typedef języka C++ </strong> powoduje ",
+    "answers": [
+      "przypisanie nowej nazwy do istniejącego typu",
+      "stworzenie nowej tablicy",
+      "przypisanie nowej nazwy do istniejącej zmiennej",
+      "stworzenie nowego typu dany"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 10,
+    "question": "Wyrażenie języka <strong> Scheme: '((+ 1 2) (- 2 3) (-3 4)) </strong> ",
+    "answers": [
+      "Listę wartości: 3, -1, -1, ()",
+      "Listę funkcji ",
+      "Nie wykona się z powodu błędu składniowego",
+      "Listę list symboli +, 1, 2, (); -, 2, 3, (); -, 3, 4, ()"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 11,
+    "question": "C++ jest językiem programowania, w którym <strong>system typów:</strong> ",
+    "answers": [
+      "jest statyczny",
+      "jest dynamiczny",
+      "zawiera tylko typy złożone",
+      "nie ma go"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 12,
+    "question": "Które wyrażenie rachunku lambda (wzbogaconego instrukcję iloczynu) będze miało to samo znaczenie, co instrukcja języka \n <strong>Scheme: (let ((x 2) (y 3)) (* x y))</strong> ",
+    "answers": [
+      "λx.λy.(* x y) 3 2",
+      "λx.[λy.(* x y)] 3 2",
+      "λx.[λ y.(* x y)] 2 3 jesli (let* ((x 2) (y 3)) (* x y))",
+      "λx.λy.(* x y) 2 3"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 13,
+    "question": "Wyrażenie <strong>((lambda (z) (lambda (x y) (+ x y z))) 1)</strong> zwraca:",
+    "answers": [
+      "Funkcję (procedura w Scheme)",
+      "Domknięcie",
+      "Nie wykona się z powodu błędu ",
+      "Wartość liczbową"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 14,
+    "question": "Zakresem widoczności zmiennych w wyrażeniu <strong>(let ((x 2) (y 3)) (+ x y))  </strong> jest:",
+    "answers": [
+      "lista ((x 2) (y 3))",
+      "całe wyrażenie (let ((x 2) (y 3)) (+ x y))",
+      "wyrażenie (y 3) i (+ x y)",
+      "wyrażenie (+ x y)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 15,
+    "question": "<strong>Smalltalk  </strong> jest językiem <strong>należącym do paradygmatu: </strong>",
+    "answers": [
+      "logicznego ",
+      "obiektowego ",
+      "imperatywnego ",
+      "funkcyjnego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 16,
+    "question": "Wyrażenie języka <strong>C#: x=>x+1 </strong>tworzy: ",
+    "answers": [
+      "wartość logiczną ",
+      "wartość całkowitą  ",
+      "nie ma takiego wyrażenie w języku C#  ",
+      "Funkcję anonimową (lambda)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 17,
+    "question": "Językiem <strong>o dynamicznym systemie typów </strong>nie jest: ",
+    "answers": [
+      "Scheme ",
+      "C",
+      "JavaScript ",
+      "PHP "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 18,
+    "question": "Do <strong>zwrócenie pierwszego elementu pary w języku Scheme </strong>służy funkcja: ",
+    "answers": [
+      "cdr  ",
+      "begin ",
+      "end  ",
+      "car  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 19,
+    "question": "Który program języka <strong>PROLOG </strong>pozwoli poprawnie <strong>obliczyć wartość silni:</strong> \n (,  ←  koniunkcja (AND)    :- ← implikacja \n; ← alternatywa (OR)",
+    "answers": [
+      "silnia(N,W) :- X is N-1, silnia(X, W_N_1), W is N*W_N_1.  silnia(0,W) :- W is 1  ",
+      "silnia(0,W) :- W = 1.silnia(N,W) :- X = N-1, silnia(X, W_N_1), W =  N*W_N_1 ",
+      "silnia(N,W) :- X = N-1, silnia(X, W_N_1), W = N*W_N_1. silnia(0,W) :-  W = 1  ",
+      "silnia(N,W) :- X is N-1, silnia(X, W_N_1), W is N*W_N_1. silnia(0,W) :- W is 1."
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 20,
+    "question": "Komenda <strong>mezczyzna(jan)? języka PROLOG </strong>definiuje \n (Zapytanie w Prologu: ?- mezczyzna(jan).   ← „Czy Jan jest mężczyzną?” )",
+    "answers": [
+      "nowe zapytanie ",
+      "nowy fakt ",
+      "ma błąd składniowy",
+      "nową relację"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 21,
+    "question": "Wyrażenie <strong>let* języka Scheme </strong>definiuje zmienne",
+    "answers": [
+      "równolegle ",
+      "rekurencyjnie ",
+      "których wartość można modyfikować",
+      "sekwencyjnie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 22,
+    "question": "Wyrażenie <strong>warunkowe w rachunku lambda </strong>zapisuje się jako:",
+    "answers": [
+      "λstx.tx  ",
+      "λstx.stx ",
+      "λstx.sxt",
+      "λstx.sx"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 23,
+    "question": "Wyrażenie <strong>let języka Scheme </strong>definiuje zmienne ",
+    "answers": [
+      "równolegle   ",
+      "rekurencyjnie  ",
+      "których wartość można modyfikować",
+      "sekwencyjnie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 24,
+    "question": "Przyjmując, że typ int zajmuje w pamięci 4 bajty, a typ char 1 bajt to zmienna typu  union Przyklad { int x; char y; }; będzie zajmować: ",
+    "answers": [
+      "4 bajty",
+      "8 bajtów (struktura int i char)  ",
+      "6 bajtów",
+      "5 bajtów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 25,
+    "question": "Wyrażenie języka <strong>C#: x=>x+2</strong> nazywane jest: ",
+    "answers": [
+      "funkcją rozszerzającą",
+      "funkcją statyczną",
+      "nie ma takiego wyrażenia w języku C# ",
+      "wyrażeniem lambda"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 26,
+    "question": "<strong> Fakty w PROLOGU:</strong>",
+    "answers": [
+      "są zawsze fałszywe",
+      "są albo prawdziwe albo fałszywe ",
+      "nie mają określonej wartości prawdy",
+      "są zawsze prawdziwe "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 27,
+    "question": "Słówko kluczowe<strong> var w C#</strong>  pozwala na ",
+    "answers": [
+      "zdefiniowanie dowolnej zmiennej",
+      "zdefiniowanie zmiennej dowolnego typu, który nie może być później zmieniany ",
+      "zdefiniowanie zmiennej typu podstawowego Object",
+      "zdefiniowanie zmiennej dowolnego typu, który może być później dowolnie zmieniany"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 28,
+    "question": "Zakresem widoczności zmiennych w wyrażeniu <strong>(let* ((x 2) (y 3)) (+ x y))</strong> jest ",
+    "answers": [
+      "lista ((x 2) (y 3))",
+      "całe wyrażenie (let ((x 2) (y 3)) (+ x y))",
+      "wyrażenie (y 3) i (+ x y)",
+      "wyrażenie (+ x y)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 29,
+    "question": "Który z poniższych języków programowania jest językiem programowania obiektowego:",
+    "answers": [
+      "Haskell ",
+      "C#",
+      "Prolog ",
+      "ML"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 30,
+    "question": "<strong>Postać normalna </strong>jest to ",
+    "answers": [
+      "Wyrażenie, którego nie można dalej redukować  ",
+      "Wyrażenie, które nie zawiera żadnej lambda abstrakcji",
+      "Wyrażenie, które nie zawiera zmiennych związanych ",
+      "Wyrażenie, które nie zawiera zmiennych wolnych "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 31,
+    "question": "<strong>Alfa konwersja </strong>polega na zmianie ",
+    "answers": [
+      "nazw zmiennych związanych ",
+      "lambda abstrakcji na aplikację ",
+      "aplikacji na lambda abstrakcję ",
+      "nazw zmiennych wolnych "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 32,
+    "question": "<strong>Operator koniunkcji jest w języku PROLOG </strong>oznaczany symbolem:",
+    "answers": [
+      ",",
+      "; ",
+      "?",
+      "."
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 33,
+    "question": "Jaka funkcja zostanie automatycznie stworzona w chwili deklaracji struktury (define-strukt punkt (x y)): ",
+    "answers": [
+      "make-punkt (konstruktor)",
+      "get-punkt (pobiera wartość ",
+      "put-punkt",
+      "set-punkt (ustawia wartość)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 34,
+    "question": "Która z poniższych instrukcji poprawnie deklaruje funkcję rozszerzającą:\n(Funkcja rozszerzająca ma this w argumencie – to co rozszerza!)",
+    "answers": [
+      "public static string Funkcja(string str) {…}",
+      "public string Funkcja(this string str) {…}",
+      "static string Funkcja(this string str) {…}",
+      "public static string Funkcja(this string str) {…} "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 35,
+    "question": "Która z poniższych instrukcji jest <strong>zawsze poprawna:</strong>",
+    "answers": [
+      "(let* ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5))",
+      "(letrec ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5))",
+      "(let~ ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5))",
+      "(let ((foo (lambda (x) (bar x))) (bar (lambda (x) (+ 1 x)))) (foo 5)) "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 36,
+    "question": "Wynikiem operacji <strong>(nfx.f(n f x) st.ssst)</strong> będzie ",
+    "answers": [
+      "λst.ssst ",
+      "λst.ss",
+      "λfx.ffffx",
+      "λfx.fffx"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 37,
+    "question": "W<strong> rekordzie aktywacji funkcji przechowywane są:</strong>",
+    "answers": [
+      "zmienne lokalne  ",
+      "stałe ",
+      "żadne z powyższych",
+      "zmienne globalne "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 38,
+    "question": "Do zwrócenia<strong> drugiego elementu pary w języku Scheme</strong> służy funkcja",
+    "answers": [
+      "cdr",
+      "begin ",
+      "end ",
+      "car "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 39,
+    "question": "Przy przekazywaniu przez wartość argumentów 'z' funkcji parametrem aktualnym może być",
+    "answers": [
+      "stała",
+      "zmienna  (przez &) ",
+      "dowolnie ",
+      "wyrażenie  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 40,
+    "question": "Zakresem widoczności zmiennych w wyrażeniu <strong>(letrec ((x 2) (y 3)) (+ x y))</strong> jest",
+    "answers": [
+      "lista ((x 2) (y 3))",
+      "całe wyrażenie (let ((x 2) (y 3)) (+ x y))",
+      "wyrażenie (y 3) i (+ x y) ",
+      "wyrażenie (+ x y)  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 41,
+    "question": "Dowolna <strong>zmienna przechowywana na stercie</strong> jest (na stercie są wskaźniki!)",
+    "answers": [
+      "zawsze typu złożonego ",
+      "zawsze anonimowa ",
+      "tworzona zawsze na początku programu",
+      "zawsze typu prostego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 42,
+    "question": "Wrażenie <strong>letrec języka Scheme</strong> definiuje zmienne ",
+    "answers": [
+      "równolegle ",
+      "rekurencyjnie",
+      "których wartość można modyfikować",
+      "sekwencyjnie"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 43,
+    "question": "<strong>Zmienna związana</strong> jest to",
+    "answers": [
+      "zmienna do której jest przypisana wartość  ",
+      "zmienna, która występuje w ciele funkcji w której jest zdefiniowana ",
+      "która nie istnieje, gdyż istnieją tylko zmienne wolne",
+      "zmienna do której przypisana jest inna zmienna "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 44,
+    "question": "Program \n#include \u003ciostream\u003e \nusing namespace std; \ntemplate \u003ctypename T\u003e \nT max(T x, T y) \n{ return (x \u003e y) ? x : y;} \nint main() \n{ cout \u003c\u003c max(3, 7) \u003c\u003c std::endl; \ncout \u003c\u003c max(3.0, 7.0) \u003c\u003c std::endl; \ncout \u003c\u003c max(3, 7.0) \u003c\u003c std::endl;\n return 0; \n  },\n da w, rezultacie}",
+    "answers": [
+      "Błąd kompilacji ze względu na brak typu danych w wywołaniu funkcji szablonowej ",
+      "Błąd kompilacji ze względu na niejednoznaczność trzeciego wywołania funkcji max",
+      "Żadne z powyższych(przysłonięcie funkcji max, bo jest std)",
+      "Wartości 7, 7.0, 7.0 "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 45,
+    "question": "Która, z poniższych instrukcji występuje <strong>tylko w paradygmacie imperatywnym i, pochodnych </strong>",
+    "answers": [
+      "wywołania funkcji ",
+      "deklaracji ",
+      "warunkowa ",
+      "pętli "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 46,
+    "question": " Za pomocą którego wyrażenia języka Scheme uzyskano poniższą strukturę:",
+    "answers": [
+      "(cons 1 (cons (cons 2 (cons 3 empty)) (cons (cons 5 empty) (cons 4 empty)))) ",
+      "(list 1 2 3 4 5) ",
+      "(cons 1 (cons (cons 2 3) (cons 5 4))))  ",
+      "(cons 1 (cons 2 (cons 3 (cons 4 (cons 5 empty))))) "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0,
+    "image": {
+      "url": "46.png",
+      "description": "to xD"
+    }
+  },
+  {
+    "id": 47,
+    "question": "Które wyrażenie rachunku lambda (wzbogaconego instrukcję iloczynu) będzie miało to samo znaczenie, co instrukcja języka <strong>Scheme: (let* ((x 2) (y 3)) (* x y))</strong>",
+    "answers": [
+      "λx.λy.(* x y) 3 2",
+      "λx.[λy.(*x y)] 3 2",
+      "λx.[λy.(*x y)] 2 3 ",
+      "λx.λy.(* x y) 2 3 "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 48,
+    "question": "<strong>Programowanie generyczne </strong>pozwala na",
+    "answers": [
+      "napisanie jednego kodu dla różnych algorytmów ",
+      "napisanie jednego kodu dla różnych nazw zmiennych ",
+      "nie ma czegoś takiego",
+      "napisanie jednego kodu dla różnych typów danych "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 49,
+    "question": "<strong>Środowisko odniesienia </strong>jest to:",
+    "answers": [
+      "zbiór dostępnych zmiennych w danym miejscu programu",
+      "zbiór dostępnych funkcji w danym miejscu programu",
+      "zbiór dostępnych stałych w danym miejscu programu",
+      "zbiór dostępnych wiązań w danym miejscu programu "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 50,
+    "question": "Wyrażeniu języka <strong> C#: (x,y)=>(x*2)+(y*3)</strong> w języku Scheme odpowiada wyrażenie",
+    "answers": [
+      "(define f ( lambda (x y) ((x*2)+(y*3))))",
+      "(lambda (x y) ((x*2)+(y*3))) ",
+      "(lambda (x y) (+ (* x 2) (* y 3))) ",
+      "(define f ( lambda (x y) (+ (* x 2) (* y 3))))  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 51,
+    "question": "Który zestaw instrukcji w języku C# spowoduje uruchomienie zadania Y po zakończeniu wykonywaniu zadania X",
+    "answers": [
+      "Tast t = new Task(Y); t.CallBefore(X); t.Start();",
+      "Tast t = new Task(Y); t.ContinueWith<y>; t.Start();",
+      "Tast t = new Task(Y); t.ContinueWith(Y); t.Start();",
+      "Tast t = new Task(Y); t.CallAfter(Y); t.Start();"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 52,
+    "question": "Dany jest kod w C#:\nClass Stos<T> {\nT[] bufor = new T[10];\nint gora = 0;\nPublic bool Sprawdz(T x) {\nReturn bufor[gora – 1].CompareTo(x);\n}\n}\nAby był on poprawny należy:",
+    "answers": [
+      "Zaimplementować w klasie Stos interfejs IComparable",
+      "Zaimplementować w klasie Stos dziedziczenie po klasie Comparable",
+      "Zmienić koncepcję programu, ponieważ w C# nie można tworzyć typów generycznych",
+      "Nałożyć odpowiednie ograniczenia na typ T"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 53,
+    "question": "Jakie elementy może zawierać klasa C# jeżeli jest zadeklarowana jako static:",
+    "answers": [
+      "Elementy statyczne i przeciążenia metod instancji",
+      "Elementy statyczne i instancji",
+      "Tylko elementy statyczne",
+      "Tylko statyczne pola i właściwości, ale nie statyczne metody"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 54,
+    "question": "Które z poniższych wyrażeń języka c# nazywamy wyrażeniem lambda",
+    "answers": [
+      "x => x",
+      "b > 12 ? 12 : x",
+      "y <= x++",
+      "y = x > 12"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 55,
+    "question": "Która z poniższych instrukcji C# pozwoli na wyznaczenie najmniejszego elementu w tablicy",
+    "answers": [
+      "Kolekcja.Aggregate((a, c) => a < c ? a : c)",
+      "Kolekcja.Aggregate((a, c) => a > c ? a : c)x",
+      "Kolekcja.Where(c => Math.Min(c))",
+      "Kolekcja.Select(c => Math.Min(c))"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 56,
+    "question": "Dane jest metoda C#: void Funkcja(Cunc<int, int>) {...}. Które z poniższych wywołań tej funkcji jest poprawne:",
+    "answers": [
+      "Funkcja(a => a.ToString())",
+      "Funkcja((a, b) => a + b)",
+      "Funkcja(a => a)",
+      "Funkcja(12)"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 57,
+    "question": "Dany jest fragment programu:\nList<int> lista = new List{1, 2, 3, 4, 5, 6, 7}\nvar wynik = lista.Where(WiekszeNiz(3)).ToList();\n\nKtóry z poniższych fragmentów może przedstawić kod funkcji WiekszeNiz:",
+    "answers": [
+      "Func<int, bool> WiekszeNiz(int wartość) \n{return wartość < x;}",
+      "Func<int, bool> WiekszeNiz(int, Func<int, bool> pred) \n{return wartość < x;}",
+      "Int WiekszeNiz(int wartość, int x)\n {return IComparable.Compare(wartość, x);}",
+      "Func<int, bool> WiekszeNiz(int wartość)\n {return (x) => wartość < x;}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 58,
+    "question": "Metoda Select z Linq zwraca",
+    "answers": [
+      "Żadne z wymienionych",
+      "Kolekcję typu lista",
+      "Kolekcję leniwą",
+      "Kolekcję typu tablica"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 59,
+    "question": "Poniższa instrukcja\nVar rezultat =\n( from v in listaLosowa\nwhere v > 10\nselect v * v\n).ToList()\nWykorzystuje zapytanie:",
+    "answers": [
+      "Prologu",
+      "Linq",
+      "XML",
+      "SQL"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 60,
+    "question": "W C# możemy tworzyć aplikacje zgodne:",
+    "answers": [
+      "Tylko z paradygmatami programowania funkcyjnego",
+      "Tylko z paradygmatami programowania obiektowego",
+      "Z paradygmatami programowania obiektowego i funkcyjnego",
+      "Z paradygmatami programowania obiektowego i logicznego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 61,
+    "question": "Które z poniższych fragmentów kody pozwoli na zapis 1.Godzina():",
+    "answers": [
+      "static class Extensions {\nstatic TimeSpan Godzina(this TimeSpan v) => throw new NotImpelemtedException()\n}",
+      "static class Extensions {\npublic static TimeSpan Godzina(int v) => throw new NotImpelemtedException()\n}",
+      "class Extensions {\npublic int Godzina(this TimeSpan v) => throw new NotImpelemtedException()\n}",
+      "static class Extensions {\npublic static static TimeSpan Godzina(this int v) => throw new\nNotImpelemtedException()\n}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 62,
+    "question": "Ograniczenia nałożone na zmienną typu w C# wymieniamy po słowie kluczowym:",
+    "answers": [
+      "where",
+      "constraint",
+      "when",
+      "filter"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 63,
+    "question": "Odpowiednikiem funkcje wyższych rzędów w programowaniu obiektowym",
+    "answers": [
+      "Nie mają odpowiednika",
+      "Jest wzorzec Strategi",
+      "Jest wzorzec Wyboru",
+      "Jest wzorzec Budowniczy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 64,
+    "question": "W której z poniższych deklaracji interfejsu, zmienna typu T może być wykorzystywana tylko jako rezultat zdefiniowanych w nim metod lub właściwości:",
+    "answers": [
+      "Interface IPrzyklad {}",
+      "Interface IPrzyklad<int T> {}",
+      "Interface IPrzyklad<out T> {}",
+      "Interface IPrzyklad<T> {}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 65,
+    "question": "Dany jest kod:\nclass Program {\nstatic IEnumerable<int> Iter() {\nyield return 1;\nyield return 2;\nyield return 3;\n}\nStatic void Main(string[] args) {\nint i = 0;\nforeach (var x in Iter()) {\ni++;\n}\nConsole.WriteLine(i);\n}\n}\n\nSpowoduje on wyświetlenie na ekranie:",
+    "answers": [
+      "Błędu przepełnienia stosu",
+      "0",
+      "1",
+      "3"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 65,
+    "question": "Niech dana będzie lista L. Operacja filtrowania zwróci nową listę, która:",
+    "answers": [
+      "Jest dłuższa od listy L",
+      "Może być krótsza lub dłuższa w zależności od funkcji, która będzie do niej przekazana",
+      "Ma zawsze tę samą długość co lista L",
+      "Nie jest dłuższa od listy L"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 66,
+    "question": "Do której z poniższych właściwości wartość można przypisać tylko w konstruktorze",
+    "answers": [
+      "public int X {get;}",
+      "public int X {get; set;}",
+      "public int X {private get; set;} ",
+      "public int X {get; private set;}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 67,
+    "question": "Monada Maybe/Option jest wzorcem projektowym należącym do paradygmatu:",
+    "answers": [
+      "Obiektowego",
+      "Niskopoziomowego",
+      "Funkcyjnego ",
+      "Proceduralnego"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 68,
+    "question": "Po wykonaniu ponioższego kodu:\nList<int> lista = new List<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\nvar y = (from x in lista where x % 2 == 0 select x);\ndo zmiennej y będzie przypisana",
+    "answers": [
+      "lista 5 elementowa",
+      "lista pusta",
+      "lista 10 elementowa ",
+      "coś innego niż lita"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 69,
+    "question": "Dany jest kod:\npublic interface IMojaKolekcja<T> {\nT Element();\n}\nJak zamienisz parametr typu T w kowariantny?",
+    "answers": [
+      "Zmienisz typ kolekcji na IMojaKolekcja<in T>",
+      "Zmienisz sygnaturę metody na: out T Element();",
+      "Zmienisz typ kolekcji na IMojaKolekcja<out T>",
+      "Zmienisz sygnaturę metody na: void Element(out T);"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 70,
+    "question": "Które zdanie jest prawdziwe:",
+    "answers": [
+      "Modyfikowany stan utrudnia tworzenie programów synchronicznych",
+      "Programowanie generyczne występuje tylko w językach obiektowych",
+      "Język F# jest zaliczany do programowania w logice",
+      "Modyfikowalny stan utrudnia tworzenie programów asynchronicznych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 71,
+    "question": "Monadą nazywamy typ, który będzie wyposażony w funkcję",
+    "answers": [
+      "Tylko Bind",
+      "Bind i Return",
+      "Tylko Return",
+      "Map"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 72,
+    "question": "Która deklaracja klasy jest poprawna:",
+    "answers": [
+      "class mojaKlasa where T: new() {}",
+      "class mojaKlasa<T> where T: new(int) {}",
+      "class mojaKlasa<T> where T: new(T) {}",
+      "class mojaKlasa<T> where T: new() {}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 73,
+    "question": "Która metoda języka C# jest poprawnie zdefiniowna:",
+    "answers": [
+      "async int Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\nreturn x;\n}",
+      "async void Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\n}",
+      "void Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\n}",
+      "int Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\nreturn x;\n}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 74,
+    "question": "Metody rozszerzające języka C# pozwalają rozszerzyć:",
+    "answers": [
+      "dowolny typ danych",
+      "tylko typy referencyjne",
+      "tylko typy wartościowa",
+      "tylko typy zapieczętowane"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 75,
+    "question": "Operator koniunkcji jest w Prologu zdefiniowany jako:",
+    "answers": [
+      "+",
+      ":=",
+      ".",
+      ","
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 76,
+    "question": "Zmienną, której typ jest wywnioskowany przez kompilator w języku C# tworzymy za pomocą słowa kluczowego",
+    "answers": [
+      "var",
+      "static",
+      "dynamic",
+      "def"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 77,
+    "question": "W języku C# instrukcja g(12, 23) + f(12, 23) == f(12, 23) + g(12, 23):",
+    "answers": [
+      "zawsze zwróci wartość true",
+      "zawsze zwróci wartość false",
+      "zwróci true lub false w zależności od postaci funkcji f i g",
+      "zwróci wartość true, ponieważ funkcje mają są wywołane z tymi samymi wartościamiparametrów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 78,
+    "question": "Słowo kluczowe fixed pozwala ",
+    "answers": [
+      "Ustawić funkcję w stałym miejscu pamięci",
+      "Ustawić właściwości w stałym miejscu pamięci",
+      "Ustawić zmienna w stałym miejscu pamięci",
+      "Żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 79,
+    "question": "Odpowiednikiem funkcji wyższych rzędów w programowaniu obiektowym jest wzorzec:",
+    "answers": [
+      "Fabryka abstrakcyjna",
+      "Obserwator",
+      "Memento",
+      "Strategia"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 80,
+    "question": "Operator mapowania jest w Linq zdefiniowany jako funkcja",
+    "answers": [
+      "Select",
+      "Map",
+      "Convert",
+      "Get"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 81,
+    "question": "Jeżeli chcesz w języku C# zdefiniować kilka zagadnień asynchronicznych i wymagasz, aby program wykonał się dalej po zakończeniu pierwszej z nich, wykorzystasz metodę:",
+    "answers": [
+      "Task.WaitForAny",
+      "Task.WaitForFirst",
+      "Task.WaitOne",
+      "Task.WaitAny"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 82,
+    "question": "Interfejs kontrawariantny jest definiowany instrukcją:",
+    "answers": [
+      "Interface IInterface<out T> {}",
+      "Interface IInterface<it T> {}",
+      "Interface IInterface<T> {}",
+      "Żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 83,
+    "question": "Instrukcja using static Przykład służy do",
+    "answers": [
+      "Zaimportowania do pliku wszystkich elementów statycznych przestrzeni nazw Przykład",
+      "Zaimportowania do pliku wszystkich elementów statycznych modułu Przykład",
+      "Zaimportowania do pliku wszystkich elementów statycznych klasy Przykład",
+      "Zaimportowania do pliku wszystkich elementów klasy Przykład"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 84,
+    "question": "Monady Either można użyć w programach napisanych w stylu funkcyjnym do",
+    "answers": [
+      "Przechowywania stanu",
+      "Przechowywania wartości opcjonalnych",
+      "Obsługi błędu",
+      "Obsługi operacji wejścia wyjścia"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 85,
+    "question": "Operator równości wartości numerycznych w prologu jest definiowany jako:",
+    "answers": [
+      "=:=",
+      "=",
+      "==",
+      ":=:"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 86,
+    "question": "Wyrażenie języka C#: x => x + 2 nazywane jest",
+    "answers": [
+      "Funkcją statyczną",
+      "Wyrażeniem lambda",
+      "Funkcją rozszerzającą",
+      "Nie ma takiego wyrażenie w języku C#"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 87,
+    "question": "Metoda Func<double, double> F (int f) {} jest:",
+    "answers": [
+      "Funkcją statyczną",
+      "Funkcją rozszerzającą",
+      "Funkcją generyczną",
+      "Funkcją wyższych rzędów"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 88,
+    "question": "Po wykonaniu programu/nTask t = new/nTask(() => {Console.Write(„A”);}); t.Start(); t.Wait();/nConsole.Write(„B”);/nt.ContinueWith(c=>{Console.Write(„C”);});/nNa ekranie pojawi się:",
+    "answers": [
+      "BAC",
+      "AB",
+      "ABC",
+      "BA"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 89,
+    "question": "Operacja sortowania w Linq jest zdefiniowana",
+    "answers": [
+      "Order",
+      "SortBy",
+      "Sort",
+      "OrderBy"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 90,
+    "question": "W interfejsach inwariantnych zmienna typu może pojawić się tylko jako",
+    "answers": [
+      "Tylko jako typ rezultatu funkcji",
+      "Tylko jako typ parametru funkcji",
+      "Żadne z powyższych",
+      "Jako rezultat i/lub parametr funkcji"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 91,
+    "question": "Typ string w języku C# jest typem:",
+    "answers": [
+      "Modyfikowalnym",
+      "Niemodyfikowalnym",
+      "Modyfikowalnym pod pewnymi warunkami",
+      "Żadne z powyższych"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 93,
+    "question": "Która instrukcja języka C# poprawnie deklaruje metodę rozszerzającą:",
+    "answers": [
+      "static class Klasa : IExtension {public static void F(Func<double, double> f) {} }",
+      "static class Klasa {public static void F(this double x) {} }",
+      "class Klasa : IExtension {public static void F(Func<double, double> f) {} }",
+      "class Klasa {public static void F(this double x) {} }"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 94,
+    "question": "Która metoda języka C# jest funkcją wyższych rzędów:",
+    "answers": [
+      "int F(this double x) {}",
+      "void F(ref double x) {}",
+      "object F(double x) {}",
+      "Func<double, double> F(int f) {}"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 95,
+    "question": "W metodzie języka C#\nasync void Metoda() {\nint x = await Metoda2();\nConsole.WriteLine(„Kominukat”);\n}",
+    "answers": [
+      "Napis „Kominukat” wyświetli się po zakończeniu zadanie zwróconego przez metodą Metoda2",
+      "Napis „Kominukat” wyświetli się natychmiast po zakończeniu metody Metoda2",
+      "Napis „Kominukat” nie wyświetli się, ponieważ C# nie ma słowa kluczowego await",
+      "Napis „Kominukat” nie wyświetli się, ponieważ C# nie ma słowa kluczowego async"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 1
+  },
+  {
+    "id": 96,
+    "question": "W C# metoda iteratora, która umożliwi przejście do następnego elementu kolekcji nazywa się:  ",
+    "answers": [
+      "Yield",
+      "GoToNext ",
+      "MoveNext ",
+      "Next "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 97,
+    "question": "Wyrażenie po prawej stronie operatora ?? (C#) obliczane jest:",
+    "answers": [
+      "Tylko, gdy wartość wyrażenia po jego lewej stronie będzie opcją o wartości None",
+      "Zawsze ",
+      "Tylko gdy wartość wyrażenia po jego lewej stronie jest równa null",
+      "Tylko gdy wartość wyrażenia po jego lewej stronie jest równa 0"
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 98,
+    "question": "Aby w C# zapisać bezparametrowe wyrażenie lambda: ",
+    "answers": [
+      "Musimy podać tylko jego ciało, bez parametrów i operatora => ",
+      "Nie musimy nic podawać po lewej stronie operatora => ",
+      "Umieszczamy puste nawiasy okrągłe po lewej stronie operatora => ",
+      "Umieszczamy puste nawiasy klamrowe po lewej stronie operatora => "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 2
+  },
+  {
+    "id": 99,
+    "question": "W funkcji iteratorowej C# zakończenie generowania kolejnych elementów zgłaszamy za pomocą instrukcji: ",
+    "answers": [
+      "Yield break",
+      "Yield return",
+      "Yield ",
+      "Return "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 0
+  },
+  {
+    "id": 100,
+    "question": " Dla rekordów C# operacja osoba with {Nazwisko = „Nowak”} spowoduje ",
+    "answers": [
+      "Utworzenie nowego rekordu, o takich samych właściwościach jak rekord osoba,\n ale mającą wartość tylko dla właściwości nazwisko   ",
+      "Nic, ponieważ rekordy nie wspierają operatora with ",
+      "Utworzenie nowego rekordu, o takich samych wartościach właściwości jak rekord \n osoba, ale o innym nazwisku   ",
+      "Zmodyfikowanie właściwości nazwisko w rekordzie osoba  "
+    ],
+    "explanation": "todo",
+    "correctAnswer": 3
+  },
+  {
+    "id": 101,
+    "question": "Dana jest funkcja: \nVoid StworzSamochod(IFactory&lt;Car&gt;fabryka)\n{ Car car = fabryka.Create();}\nAby móc do niej przekazać obiekt klasy class Factory : IFactory&lt;Truck&gt; {}, gdzie klasa Truck dziedziczy po Car, interfejs IFactory musi być:",
+    "answers": [
+      "Kontrawariantny ",
+      "Kowariantny ",
+      "Inwariantny ",
+      "Abstrakcyjny "
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 5
+  },
+  {
+    "id": 102,
+    "question": "Funkcję, która ma być uruchomiona po zakończeniu zadania Z możemy przypisać do niego za pomocą metody ContinueWith",
+    "answers": [
+      "Tylko przed uruchomieniem zadania Z",
+      "Tylko po uruchomieniu zadania Z",
+      "W dowolnym momencie po utworzeniu zadania Z",
+      "Tylko po zakończeniu zadania Z "
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 5
+  },
+  {
+    "id": 103,
+    "question": "Kiedy operacja pośrednia LINQ np. Where jest uruchamiana: ",
+    "answers": [
+      "Kiedy wywoływana jest funkcja uruchamiająca przepływ danych np. Single",
+      "Kiedy jest dołączona do przepływu danych",
+      "Kiedy strumień danych jest zamykany metodą Close   ",
+      "W zestawie z innymi operacjami zależnie od ustawień kompilatora"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 0
+  },
+  {
+    "id": 104,
+    "question": "Języki domenowe wewnętrzne:",
+    "answers": [
+      "Nie istnieją",
+      "Wymagają specjalnych narzędzi do definiowania",
+      "Korzystają z mechanizmów języka w którym są definiowane",
+      "Nie mogą być implementowane w C#"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 2
+  },
+  {
+    "id": 105,
+    "question": "Metody rozszerzające możemy definiować:",
+    "answers": [
+      "Tylko dla typów wartościowych",
+      "Dla wszystkich typów ",
+      "Tylko dla typów referencyjnych",
+      "Tylko dla typów wbudowanych"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 1
+  },
+  {
+    "id": 106,
+    "question": "Którą z poniższych deklaracji poprawnie zdefiniuje operator konwersji zawsze wywoływany jawnie: ",
+    "answers": [
+      "Public static explicit operator int(Kwota k)\n { return 0; }",
+      "Public static explicit int(Kwota k)\n { return 0; }",
+      "Public static implicit operator int(Kwota k) \n { return 0; } ",
+      "Public explicit operator int(Kwota k)\n { return 0; }"
+    ],
+    "explanation": "nein xD",
+    "correctAnswer": 5
+  }
+]
+
