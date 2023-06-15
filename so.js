@@ -726,7 +726,7 @@ function handleQuizButtonClick(event) {
 
         // Definiowanie quizzesContainer w zależności od isUpperHalf
         let quizzesContainer = isUpperHalf ? quizzesUpperHalf : quizzesLowerHalf;
-        startSelect edQuiz(quizIndex, quizzesContainer);
+        startSelectedQuiz(quizIndex, quizzesContainer);
     }
 }
 
