@@ -504,7 +504,8 @@ function restartQuiz() {
     correctAnswers = 0; // Zresetuj liczbê poprawnych odpowiedzi
     wrongAnswers = 0; // Zresetuj liczbê b³êdnych odpowiedzi
 
-    if(isFullQuiz){fetchData(); // Pobierz dane z pliku JSON}
+    if(isFullQuiz){fetchData(); // Pobierz dane z pliku JSON
+}
     
 }   
 
