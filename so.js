@@ -504,8 +504,8 @@ function restartQuiz() {
     correctAnswers = 0; // Zresetuj liczbê poprawnych odpowiedzi
     wrongAnswers = 0; // Zresetuj liczbê b³êdnych odpowiedzi
 
-    if(isFullQuiz){fetchData(); // Pobierz dane z pliku JSON
-}
+    fetchData(); // Pobierz dane z pliku JSON
+
     
 }   
 
@@ -733,8 +733,13 @@ function handleQuizButtonClick(event) {
 
 function generateQuizzes(allQuestions, quizzesContainer) {
 
-    let numberOfQuizzes = 6;
-if(isUpperHalf){numberOfQuizzes = 7};
+    let numberOfQuizzes;
+if(isUpperHalf){
+    numberOfQuizzes = 7;
+}
+else{
+    numberOfQuizzes = 6;
+}
     const questionsPerQuiz = Math.ceil(allQuestions.length / numberOfQuizzes); // Zaokrąglij do góry aby zapewnić, że wszystkie pytania zostaną użyte
 
     for (let i = 0; i < numberOfQuizzes; i++) {
