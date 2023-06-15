@@ -504,7 +504,8 @@ function restartQuiz() {
     correctAnswers = 0; // Zresetuj liczbê poprawnych odpowiedzi
     wrongAnswers = 0; // Zresetuj liczbê b³êdnych odpowiedzi
 
-    fetchData(); // Pobierz dane z pliku JSON
+    if(isFullQuiz){fetchData(); // Pobierz dane z pliku JSON}
+    
 }   
 
 // Funkcja sprawdzająca odpowiedź i zliczająca wyniki
@@ -725,12 +726,14 @@ function handleQuizButtonClick(event) {
 
         // Definiowanie quizzesContainer w zależności od isUpperHalf
         let quizzesContainer = isUpperHalf ? quizzesUpperHalf : quizzesLowerHalf;
-        startSelectedQuiz(quizIndex, quizzesContainer);
+        startSelect edQuiz(quizIndex, quizzesContainer);
     }
 }
 
 function generateQuizzes(allQuestions, quizzesContainer) {
-    const numberOfQuizzes = 6;
+
+    let numberOfQuizzes = 6;
+if(isUpperHalf){numberOfQuizzes = 7};
     const questionsPerQuiz = Math.ceil(allQuestions.length / numberOfQuizzes); // Zaokrąglij do góry aby zapewnić, że wszystkie pytania zostaną użyte
 
     for (let i = 0; i < numberOfQuizzes; i++) {
